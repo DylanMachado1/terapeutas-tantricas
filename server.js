@@ -2,7 +2,7 @@ const http = require("node:http");
 const fs = require("node:fs");
 const path = require("node:path");
 
-const port = Number(process.env.PORT || 3000);
+const preferredPort = Number(process.env.PORT || 3000);
 const root = __dirname;
 
 const mimeTypes = {
@@ -37,7 +37,8 @@ function sendFile(res, filePath) {
 }
 
 const server = http.createServer((req, res) => {
-  const url = new URL(req.url, `http://localhost:${port}`);
+  const currentPort = server.address()?.port || preferredPort;
+  const url = new URL(req.url, `http://localhost:${currentPort}`);
   const cleanPath = decodeURIComponent(url.pathname).replace(/^\/+/, "");
   const requestedPath = cleanPath || "index.html";
   const filePath = path.resolve(root, requestedPath);
@@ -58,6 +59,20 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(port, () => {
-  console.log(`Terapeutas Tantricas listo en http://localhost:${port}`);
-});
+function listen(port, attemptsLeft = 10) {
+  server.once("error", (error) => {
+    if (error.code === "EADDRINUSE" && attemptsLeft > 0) {
+      console.log(`Puerto ${port} ocupado, probando ${port + 1}...`);
+      listen(port + 1, attemptsLeft - 1);
+      return;
+    }
+
+    throw error;
+  });
+
+  server.listen(port, () => {
+    console.log(`Terapeutas Tantricas listo en http://localhost:${port}`);
+  });
+}
+
+listen(preferredPort);
