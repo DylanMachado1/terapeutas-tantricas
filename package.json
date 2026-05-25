@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "node server.js",
     "start": "node server.js",
+    "build": "npm run check",
     "check": "node --check script.js && node --check server.js"
   }
 }
