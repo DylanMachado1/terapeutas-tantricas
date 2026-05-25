@@ -299,14 +299,14 @@ function renderPrices() {
 
 function renderGallery() {
   els.galleryGrid.innerHTML = galleryItems
-    .map((item) => {
+    .map((item, index) => {
       const media =
         item.type === "video"
           ? `<video src="${item.src}" muted loop playsinline controls poster="${item.poster || ""}"></video>`
           : `<img src="${item.src}" alt="${item.title}" loading="lazy" decoding="async" />`;
 
       return `
-        <article class="gallery-item ${item.layout}">
+        <article class="gallery-item ${item.layout}" style="--delay: ${Math.min(index * 55, 420)}ms">
           ${media}
           <div class="gallery-caption">
             <strong>${item.title}</strong>
@@ -316,6 +316,30 @@ function renderGallery() {
       `;
     })
     .join("");
+
+  revealGalleryItems();
+}
+
+function revealGalleryItems() {
+  const items = els.galleryGrid.querySelectorAll(".gallery-item");
+
+  if (!("IntersectionObserver" in window)) {
+    items.forEach((item) => item.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "0px 0px -10% 0px", threshold: 0.18 }
+  );
+
+  items.forEach((item) => observer.observe(item));
 }
 
 function fillServiceSelect() {
