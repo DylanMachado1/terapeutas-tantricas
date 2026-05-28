@@ -328,6 +328,7 @@ p {
 .price-card,
 .tech-grid article,
 .coming-card,
+.therapist-card,
 .booking-form {
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -415,7 +416,7 @@ p {
 
 .therapists {
   display: grid;
-  grid-template-columns: 1fr minmax(280px, 420px);
+  grid-template-columns: 0.78fr 1.22fr;
   gap: 28px;
   align-items: stretch;
 }
@@ -450,6 +451,75 @@ p {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 34px;
   font-weight: 500;
+}
+
+.therapist-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.therapist-card {
+  display: grid;
+  align-content: end;
+  min-height: 320px;
+  padding: 26px;
+  position: relative;
+  overflow: hidden;
+}
+
+.therapist-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(8, 9, 12, 0.16), rgba(8, 9, 12, 0.86)),
+    url("assets/optimized/tatami-sensual.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.04);
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.therapist-card.male::before {
+  background:
+    linear-gradient(180deg, rgba(8, 9, 12, 0.2), rgba(8, 9, 12, 0.88)),
+    url("assets/optimized/masaje-espalda.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.therapist-card:hover::before {
+  filter: saturate(1.1) brightness(1.06);
+  transform: scale(1.075);
+}
+
+.therapist-card span,
+.therapist-card strong,
+.therapist-card p {
+  position: relative;
+  z-index: 1;
+}
+
+.therapist-card span {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.therapist-card strong {
+  margin: 12px 0 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.therapist-card p {
+  margin-bottom: 0;
+  color: #efe2da;
 }
 
 .price-band {
