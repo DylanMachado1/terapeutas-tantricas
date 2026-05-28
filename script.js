@@ -104,9 +104,9 @@ const galleryItems = [
   },
   {
     type: "image",
-    src: "assets/optimized/cadera.jpg",
-    title: "Luz y piel",
-    label: "Nuevo",
+    src: "assets/optimized/noa-luz-calida.jpg",
+    title: "Finesa",
+    label: "Noa",
     layout: "tall warm",
   },
   {
