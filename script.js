@@ -223,10 +223,10 @@ const galleryItems = [
   },
   {
     type: "image",
-    src: "assets/optimized/tatami-bn.jpg",
-    title: "Linea y misterio",
-    label: "Tatami",
-    layout: "tall noir",
+    src: "assets/optimized/noa-rojo.jpg",
+    title: "Intensidad",
+    label: "Noa",
+    layout: "tall warm",
   },
 ];
 
