@@ -111,10 +111,10 @@ const galleryItems = [
   },
   {
     type: "image",
-    src: "assets/optimized/masaje-pie.jpg",
-    title: "Contacto sensitivo",
-    label: "Masaje",
-    layout: "tall soft",
+    src: "assets/optimized/noa-blanco-bn.jpg",
+    title: "Sutileza",
+    label: "Noa",
+    layout: "tall noir",
   },
   {
     type: "image",
