@@ -83,6 +83,27 @@ const galleryItems = [
   },
   {
     type: "image",
+    src: "assets/optimized/noa-elegancia.jpg",
+    title: "Elegancia",
+    label: "Noa",
+    layout: "tall noir",
+  },
+  {
+    type: "image",
+    src: "assets/optimized/noa-finesa.jpg",
+    title: "Finesa",
+    label: "Noa",
+    layout: "tall warm",
+  },
+  {
+    type: "image",
+    src: "assets/optimized/noa-misterio.jpg",
+    title: "Misterio",
+    label: "Noa",
+    layout: "tall warm",
+  },
+  {
+    type: "image",
     src: "assets/optimized/cadera.jpg",
     title: "Luz y piel",
     label: "Nuevo",
