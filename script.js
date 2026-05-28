@@ -31,9 +31,9 @@ const services = [
     price: "USD 200",
     deposit: "$1000",
     featured: false,
-    meta: ["Tatami profesional", "Tules suaves", "Piel a piel"],
+    meta: ["Tatami profesional", "Piel a piel", "Aceites tibios"],
     description:
-      "Relax, respiracion, contacto y energia corporal en una experiencia envolvente. Combina masaje sensorial, aceite tibio premium y conexion corporal profunda.",
+      "Combinamos tres masajes en una experiencia mas intensa: sensorial, relajante y erotico sensual. El plus del tatami es un encuentro mas jugado, piel a piel, con desnudez plena, una danza erotica y aceites tibios recorriendo tu cuerpo, culminando en un final profundamente intenso mediante la estimulacion cuidada de las zonas intimas.",
   },
   {
     id: "tatami-interactivo",
