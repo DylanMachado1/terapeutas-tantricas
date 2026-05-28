@@ -7,9 +7,9 @@ const services = [
     price: "$5000",
     deposit: "$1000",
     featured: false,
-    meta: ["Camilla profesional", "Descontracturante", "Aceites tibios"],
+    meta: ["Camilla profesional", "Masaje relajante profundo", "Aceites tibios"],
     description:
-      "Combinacion de masaje descontracturante profesional, relajacion profunda y conexion sensorial. Ideal para aliviar tensiones, oxigenar el cuerpo y bajar el estres acumulado.",
+      "Este masaje es una combinacion de tres masajes en uno: un masaje sensorial para elevar la energia sexual y mantenerla, un masaje relajante profundo para oxigenar el cuerpo y finalmente un masaje sensual y erotico, culminandolo fervientemente en un orgasmo manual profesional.",
   },
   {
     id: "camilla-interactiva",
