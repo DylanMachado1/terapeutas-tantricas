@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Panel Admin | Terapeutas Tantricas</title>
+    <meta
+      name="description"
+      content="Panel privado para administrar reservas, horarios y notificaciones."
+    />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <main class="admin-shell">
+      <section class="admin-login" id="loginView">
+        <div class="login-card">
+          <a class="brand" href="index.html" aria-label="Volver al sitio">
+            <span class="brand-mark">*</span>
+            <span>
+              <strong>Terapeutas</strong>
+              <small>Panel privado</small>
+            </span>
+          </a>
+          <div>
+            <p class="eyebrow">Acceso exclusivo</p>
+            <h1>Ingreso administrativo</h1>
+            <p>
+              Vista previa del panel seguro. Cuando compremos el hosting, este
+              acceso se conecta con usuario real, base de datos y Gmail.
+            </p>
+          </div>
+          <form class="login-form" id="loginForm">
+            <label>
+              Email administrador
+              <input type="email" id="adminEmail" placeholder="admin@gmail.com" required />
+            </label>
+            <label>
+              Contrasena
+              <input type="password" id="adminPassword" placeholder="Solo para demo" required />
+            </label>
+            <button class="btn primary" type="submit">Entrar al panel</button>
+          </form>
+          <p class="login-note">
+            Demo: ingresa cualquier email y contrasena para ver el diseno.
+          </p>
+        </div>
+      </section>
+
+      <section class="dashboard hidden" id="dashboardView">
+        <aside class="sidebar">
+          <a class="brand" href="index.html" aria-label="Volver al sitio">
+            <span class="brand-mark">*</span>
+            <span>
+              <strong>Terapeutas</strong>
+              <small>Admin</small>
+            </span>
+          </a>
+          <nav class="side-nav" aria-label="Panel admin">
+            <a href="#reservas" class="active">Reservas</a>
+            <a href="#agenda">Agenda</a>
+            <a href="#seguridad">Seguridad</a>
+            <a href="#gmail">Gmail</a>
+          </nav>
+          <div class="security-card">
+            <span>Seguridad prevista</span>
+            <strong>Solo administradora</strong>
+            <p>Login real, sesion privada y permisos por email al pasar a servidor.</p>
+          </div>
+        </aside>
+
+        <section class="panel-content">
+          <header class="panel-header">
+            <div>
+              <p class="eyebrow">Panel privado</p>
+              <h1>Reservas y agenda</h1>
+              <p>Control de turnos, senas, estados y notificaciones a Gmail.</p>
+            </div>
+            <div class="header-actions">
+              <a class="btn ghost" href="index.html">Ver web</a>
+              <button class="btn primary" type="button" id="logoutButton">Salir</button>
+            </div>
+          </header>
+
+          <section class="metric-grid" aria-label="Resumen de reservas">
+            <article class="metric-card">
+              <span>Reservas</span>
+              <strong id="totalBookings">0</strong>
+              <small>Total visible</small>
+            </article>
+            <article class="metric-card">
+              <span>Hoy</span>
+              <strong id="todayBookings">0</strong>
+              <small>Turnos del dia</small>
+            </article>
+            <article class="metric-card">
+              <span>Senas</span>
+              <strong id="depositTotal">$0</strong>
+              <small>Reservas tomadas</small>
+            </article>
+            <article class="metric-card">
+              <span>Ocupacion</span>
+              <strong id="busySlots">0</strong>
+              <small>Horarios bloqueados</small>
+            </article>
+          </section>
+
+          <section class="admin-section" id="reservas">
+            <div class="section-top">
+              <div>
+                <p class="eyebrow">Gestion</p>
+                <h2>Reservas recibidas</h2>
+              </div>
+              <div class="filters">
+                <input type="search" id="searchInput" placeholder="Buscar nombre, telefono o servicio" />
+                <select id="statusFilter">
+                  <option value="all">Todos los estados</option>
+                  <option value="pendiente">Pendientes</option>
+                  <option value="confirmada">Confirmadas</option>
+                  <option value="cancelada">Canceladas</option>
+                </select>
+              </div>
+            </div>
+            <div class="reservation-table" id="reservationTable"></div>
+          </section>
+
+          <section class="admin-grid">
+            <article class="admin-section" id="agenda">
+              <p class="eyebrow">Agenda</p>
+              <h2>Proximos horarios</h2>
+              <div class="timeline" id="timeline"></div>
+            </article>
+
+            <article class="admin-section" id="gmail">
+              <p class="eyebrow">Notificaciones</p>
+              <h2>Gmail</h2>
+              <div class="setting-list">
+                <div>
+                  <span>Email destino</span>
+                  <strong>pendiente@gmail.com</strong>
+                </div>
+                <div>
+                  <span>Envio automatico</span>
+                  <strong>Al confirmar reserva</strong>
+                </div>
+                <div>
+                  <span>Estado</span>
+                  <strong>Listo para conectar</strong>
+                </div>
+              </div>
+            </article>
+
+            <article class="admin-section security-wide" id="seguridad">
+              <p class="eyebrow">Seguridad</p>
+              <h2>Acceso privado real</h2>
+              <ul class="security-list">
+                <li>Usuario unico para la administradora.</li>
+                <li>Contrasena protegida por servidor, nunca en la web publica.</li>
+                <li>Reservas guardadas en base de datos privada.</li>
+                <li>Notificaciones por Gmail sin exponer claves.</li>
+              </ul>
+            </article>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="admin.js"></script>
+  </body>
+</html>
