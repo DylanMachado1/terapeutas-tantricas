@@ -2,9 +2,11 @@ const storageKey = "terapeutasTantricasBookings";
 const adminSessionKey = "terapeutasTantricasAdminPreview";
 
 const services = {
-  "camilla-comun": "Experiencia Camilla",
+  "camilla-comun": "Camilla Comun",
   "camilla-interactiva": "Camilla Interactiva",
-  "tatami-comun": "Experiencia Tatami",
+  "camilla-jacuzzi": "Camilla Interactiva con Jacuzzi",
+  "tatami-comun": "Tatami Comun",
+  "tatami-jacuzzi": "Tatami con Jacuzzi",
   "tatami-interactivo": "Tatami Interactivo",
   "masaje-parejas": "Masaje para Parejas",
   "hombre-a-hombre": "Masaje Hombre a Hombre",
@@ -24,14 +26,14 @@ const demoBookings = [
   },
   {
     id: "demo-2",
-    serviceId: "tatami-comun",
+    serviceId: "tatami-jacuzzi",
     name: "Reserva privada",
     phone: "+598 98 222 333",
     date: todayIso(1),
     time: "18:30",
     deposit: 1000,
     status: "confirmada",
-    message: "Prefiere coordinar por WhatsApp.",
+    message: "Consulta por experiencia con jacuzzi y eucalipto.",
   },
   {
     id: "demo-3",
@@ -146,7 +148,7 @@ function renderTable(bookings) {
           </div>
           <div>
             <strong>${booking.date} · ${booking.time}</strong>
-            <small>Sena ${money(booking.deposit)}</small>
+            <small>Seña ${money(booking.deposit)}</small>
           </div>
           <div class="row-actions">
             <span class="status-pill ${booking.status}">${booking.status}</span>

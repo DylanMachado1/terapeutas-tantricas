@@ -70,6 +70,7 @@ textarea {
   display: inline-flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
   color: var(--red-deep);
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -96,6 +97,8 @@ textarea {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 18px;
   font-weight: 600;
+  max-width: 230px;
+  line-height: 1.05;
 }
 
 .brand small {
@@ -1123,7 +1126,8 @@ textarea:focus {
   }
 
   .brand strong {
-    font-size: 15px;
+    max-width: 170px;
+    font-size: 14px;
   }
 
   .brand small {

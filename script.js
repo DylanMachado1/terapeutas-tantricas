@@ -1,15 +1,15 @@
 const services = [
   {
     id: "camilla-comun",
-    title: "Experiencia Camilla",
+    title: "Camilla Comun",
     label: "Relax profundo",
-    duration: 60,
+    duration: 50,
     price: "$5000",
     deposit: "$1000",
     featured: false,
     meta: ["Camilla profesional", "Masaje relajante profundo", "Aceites tibios"],
     description:
-      "Este masaje es una combinacion de tres masajes en uno: un masaje sensorial para elevar la energia sexual y mantenerla, un masaje relajante profundo para oxigenar el cuerpo y finalmente un masaje sensual y erotico, culminandolo fervientemente en un orgasmo manual profesional.",
+      "Una experiencia profesional en camilla para relajar el cuerpo, oxigenar los musculos y bajar el estres acumulado. Combina masaje sensorial, relajante profundo y conexion sensual en un ambiente privado, cuidado y elegante.",
   },
   {
     id: "camilla-interactiva",
@@ -24,16 +24,40 @@ const services = [
       "Una propuesta mas cercana e interactiva para disfrutar un masaje descontracturante mientras descubris movimientos, respiracion y sensorialidad junto a la terapeuta.",
   },
   {
-    id: "tatami-comun",
-    title: "Experiencia Tatami",
-    label: "Sensualidad intensa",
+    id: "camilla-jacuzzi",
+    title: "Camilla Interactiva con Jacuzzi",
+    label: "Ritual completo",
     duration: 75,
+    price: "Consultar",
+    deposit: "$1000",
+    featured: true,
+    meta: ["15 min de jacuzzi", "Eucalipto", "Camilla interactiva"],
+    description:
+      "La experiencia comienza con 15 minutos de jacuzzi caliente y aromas de eucalipto para soltar tensiones y oxigenar el cuerpo. Luego se realiza una pausa de preparacion con agua refrescante o cafe, y continua el masaje interactivo en camilla.",
+  },
+  {
+    id: "tatami-comun",
+    title: "Tatami Comun",
+    label: "Sensualidad intensa",
+    duration: 50,
     price: "USD 200",
     deposit: "$1000",
     featured: false,
     meta: ["Tatami profesional", "Piel a piel", "Aceites tibios"],
     description:
-      "Combinamos tres masajes en una experiencia mas intensa: sensorial, relajante y erotico sensual. El plus del tatami es un encuentro mas jugado, piel a piel, con desnudez plena, una danza erotica y aceites tibios recorriendo tu cuerpo, culminando en un final profundamente intenso mediante la estimulacion cuidada de las zonas intimas.",
+      "Combinamos tres masajes en una experiencia mas intensa: sensorial, relajante y erotico sensual. El plus del tatami es un encuentro mas jugado, piel a piel, con aceites tibios y una conexion corporal profunda.",
+  },
+  {
+    id: "tatami-jacuzzi",
+    title: "Tatami con Jacuzzi",
+    label: "Relax extremo",
+    duration: 60,
+    price: "Consultar",
+    deposit: "$1000",
+    featured: true,
+    meta: ["15 min de jacuzzi", "Aromas de eucalipto", "Tatami sensorial"],
+    description:
+      "Una experiencia superior que suma jacuzzi antes del masaje. El agua tibia, el vapor y el eucalipto preparan el cuerpo para una relajacion profunda; luego se pasa al tatami para vivir el masaje sensorial con mayor entrega y conexion.",
   },
   {
     id: "tatami-interactivo",
@@ -272,7 +296,7 @@ const els = {
 };
 
 function moneyLabel(service) {
-  return `${service.price} · Sena ${service.deposit}`;
+  return `${service.price} · Seña ${service.deposit}`;
 }
 
 function getBookings() {
@@ -356,7 +380,7 @@ function renderPrices() {
         <article class="price-card">
           <p class="eyebrow">${service.title}</p>
           <strong>${service.price}</strong>
-          <small>Duracion ${service.duration} min · Reserva con sena de $1000</small>
+          <small>Duracion ${service.duration} min · Reserva con seña de $1000</small>
         </article>
       `
     )
@@ -451,7 +475,7 @@ function updateSummary() {
   els.summaryBox.innerHTML = `
     <strong>${service.title}</strong><br>
     ${date} de ${time} a ${end}<br>
-    Valor: ${service.price} · Sena para reservar: $1000
+    Valor: ${service.price} · Seña para reservar: $1000
   `;
 }
 
@@ -527,7 +551,7 @@ function submitBooking(event) {
   updateTimes();
   updateSummary();
   renderBookings();
-  showToast("Reserva confirmada. El horario quedo bloqueado con sena de $1000.");
+  showToast("Reserva confirmada. El horario quedo bloqueado con seña de $1000.");
 }
 
 function initAgeGate() {
