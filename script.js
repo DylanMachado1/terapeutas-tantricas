@@ -16,7 +16,7 @@ const services = [
     title: "Camilla Interactiva",
     label: "Conexion participativa",
     duration: 60,
-    price: "$10000",
+    price: "$12000 / USD 300",
     deposit: "$1000",
     featured: true,
     meta: ["Masaje profesional", "Aprendizaje sensorial", "Ambiente privado"],
@@ -28,7 +28,7 @@ const services = [
     title: "Camilla Interactiva con Jacuzzi",
     label: "Ritual completo",
     duration: 75,
-    price: "Consultar",
+    price: "USD 500",
     deposit: "$1000",
     featured: true,
     meta: ["15 min de jacuzzi", "Eucalipto", "Camilla interactiva"],
@@ -40,24 +40,12 @@ const services = [
     title: "Tatami Comun",
     label: "Sensualidad intensa",
     duration: 50,
-    price: "USD 200",
+    price: "$8000 / USD 200",
     deposit: "$1000",
     featured: false,
     meta: ["Tatami profesional", "Piel a piel", "Aceites tibios"],
     description:
       "Combinamos tres masajes en una experiencia mas intensa: sensorial, relajante y erotico sensual. El plus del tatami es un encuentro mas jugado, piel a piel, con aceites tibios y una conexion corporal profunda.",
-  },
-  {
-    id: "tatami-jacuzzi",
-    title: "Tatami con Jacuzzi",
-    label: "Relax extremo",
-    duration: 60,
-    price: "Consultar",
-    deposit: "$1000",
-    featured: true,
-    meta: ["15 min de jacuzzi", "Aromas de eucalipto", "Tatami sensorial"],
-    description:
-      "Una experiencia superior que suma jacuzzi antes del masaje. El agua tibia, el vapor y el eucalipto preparan el cuerpo para una relajacion profunda; luego se pasa al tatami para vivir el masaje sensorial con mayor entrega y conexion.",
   },
   {
     id: "tatami-interactivo",
@@ -70,6 +58,18 @@ const services = [
     meta: ["Experiencia interactiva", "Aceites premium", "Conexion"],
     description:
       "Para descubrir el tantra desde el sentir y el aprendizaje sensorial. Respiracion consciente, estimulos suaves, caricias y energia compartida en un entorno elegante.",
+  },
+  {
+    id: "tatami-jacuzzi",
+    title: "Tatami Interactivo con Jacuzzi",
+    label: "Relax extremo",
+    duration: 90,
+    price: "USD 500",
+    deposit: "$1000",
+    featured: true,
+    meta: ["15 min de jacuzzi", "Tatami interactivo", "Aromas de eucalipto"],
+    description:
+      "Una experiencia superior que suma jacuzzi antes del tatami interactivo. El agua tibia, el vapor y el eucalipto preparan el cuerpo para una relajacion profunda; luego se pasa al tatami para vivir el masaje sensorial con mayor entrega y conexion.",
   },
   {
     id: "masaje-parejas",

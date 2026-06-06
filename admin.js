@@ -6,7 +6,7 @@ const services = {
   "camilla-interactiva": "Camilla Interactiva",
   "camilla-jacuzzi": "Camilla Interactiva con Jacuzzi",
   "tatami-comun": "Tatami Comun",
-  "tatami-jacuzzi": "Tatami con Jacuzzi",
+  "tatami-jacuzzi": "Tatami Interactivo con Jacuzzi",
   "tatami-interactivo": "Tatami Interactivo",
   "masaje-parejas": "Masaje para Parejas",
   "hombre-a-hombre": "Masaje Hombre a Hombre",
