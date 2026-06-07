@@ -9,7 +9,6 @@ const services = {
   "tatami-jacuzzi": "Tatami Interactivo con Jacuzzi",
   "tatami-interactivo": "Tatami Interactivo",
   "masaje-parejas": "Masaje para Parejas",
-  "hombre-a-hombre": "Masaje Hombre a Hombre",
 };
 
 const demoBookings = [

@@ -83,18 +83,6 @@ const services = [
     description:
       "Una experiencia pensada para dos personas, orientada a la relajacion, la conexion sensorial y el disfrute compartido en un entorno privado, calido y profesional.",
   },
-  {
-    id: "hombre-a-hombre",
-    title: "Masaje Hombre a Hombre",
-    label: "Terapeuta masculino",
-    duration: 60,
-    price: "Consultar",
-    deposit: "$1000",
-    featured: false,
-    meta: ["Terapeuta hombre", "Relax sensitivo", "Discrecion total"],
-    description:
-      "Sesion privada con terapeuta masculino, enfocada en el relax profundo, la descarga de tensiones y la conexion sensorial desde una mirada cuidada y profesional.",
-  },
 ];
 
 const galleryItems = [
