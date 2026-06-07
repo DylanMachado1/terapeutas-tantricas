@@ -71,18 +71,6 @@ const services = [
     description:
       "Una experiencia superior que suma jacuzzi antes del tatami interactivo. El agua tibia, el vapor y el eucalipto preparan el cuerpo para una relajacion profunda; luego se pasa al tatami para vivir el masaje sensorial con mayor entrega y conexion.",
   },
-  {
-    id: "masaje-parejas",
-    title: "Masaje para Parejas",
-    label: "Experiencia compartida",
-    duration: 90,
-    price: "Consultar",
-    deposit: "$1000",
-    featured: true,
-    meta: ["Parejas", "Conexion compartida", "Ambiente privado"],
-    description:
-      "Una experiencia pensada para dos personas, orientada a la relajacion, la conexion sensorial y el disfrute compartido en un entorno privado, calido y profesional.",
-  },
 ];
 
 const galleryItems = [

@@ -8,7 +8,6 @@ const services = {
   "tatami-comun": "Tatami Comun",
   "tatami-jacuzzi": "Tatami Interactivo con Jacuzzi",
   "tatami-interactivo": "Tatami Interactivo",
-  "masaje-parejas": "Masaje para Parejas",
 };
 
 const demoBookings = [
@@ -36,14 +35,14 @@ const demoBookings = [
   },
   {
     id: "demo-3",
-    serviceId: "masaje-parejas",
-    name: "Pareja",
+    serviceId: "camilla-jacuzzi",
+    name: "Cliente reservado",
     phone: "+598 97 444 555",
     date: todayIso(2),
     time: "20:00",
     deposit: 1000,
     status: "pendiente",
-    message: "Consulta disponibilidad para dos.",
+    message: "Consulta por camilla interactiva con jacuzzi.",
   },
 ];
 
