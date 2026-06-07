@@ -143,13 +143,21 @@ textarea {
 .menu-toggle {
   display: none;
   justify-self: end;
+  place-items: center;
   width: 44px;
   height: 44px;
+  padding: 0;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: #fff;
   color: var(--red-deep);
   box-shadow: 0 10px 26px rgba(104, 34, 44, 0.08);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .hero {
