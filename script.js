@@ -45,7 +45,7 @@ const services = [
     featured: false,
     meta: ["Tatami profesional", "Piel a piel", "Aceites tibios"],
     description:
-      "Combinamos tres masajes en una experiencia mas intensa: sensorial, relajante y erotico sensual. El plus del tatami es un encuentro mas jugado, piel a piel, con aceites tibios y una conexion corporal profunda.",
+      "Los tatamis nos dan el plus de cercania y potenciamos el erotismo. Enfatizamos el piel a piel y la danza erotica de los cuerpos. Es una experiencia mas jugada a la hora de sensualidad. La caricia consciente se realiza mas ferviente y erotica. Es para quienes buscan recibir un erotismo mas ferviente. La terapia se brinda en 4 etapas: conexion tantrica, una sola respiracion; masaje sensorial con tules; masaje sensual erotico con aceites calientes premium de coco; piel a piel, cuerpo a cuerpo, full desnudes. Terminacion manual ferviente. No hay penetracion.",
   },
   {
     id: "tatami-interactivo",
