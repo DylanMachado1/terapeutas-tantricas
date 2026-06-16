@@ -9,7 +9,7 @@ const services = [
     featured: false,
     meta: ["Camilla profesional", "Masaje relajante profundo", "Aceites tibios"],
     description:
-      "Una experiencia profesional en camilla para relajar el cuerpo, oxigenar los musculos y bajar el estres acumulado. Combina masaje sensorial, relajante profundo y conexion sensual en un ambiente privado, cuidado y elegante.",
+      "Una experiencia profesional en camilla para relajar el cuerpo, oxigenar los musculos y bajar el estres acumulado. Aqui enfatizamos un verdadero masaje relajante. Comenzamos con un masaje sensorial que se realiza con tules suaves, luego un masaje relajante profundo con aceites de coco que poco a poco se convierte en erotico y sensual. Dando una terminacion erotica manual. Sin penetracion.",
   },
   {
     id: "camilla-interactiva",
