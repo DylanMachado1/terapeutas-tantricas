@@ -21,7 +21,7 @@ const services = [
     featured: true,
     meta: ["Masaje profesional", "Aprendizaje sensorial", "Ambiente privado"],
     description:
-      "Una propuesta mas cercana e interactiva para disfrutar un masaje descontracturante mientras descubris movimientos, respiracion y sensorialidad junto a la terapeuta.",
+      "Una experiencia mas cercana al sentir y dar la caricia consciente. Te permitiras interactuar con la terapeuta mediante la verdadera conexion del sentir en tres masajes. Permitiendo descubrir tecnicas con la masajista que elevan el sentir sensorial, sensual y erotico. Aqui aprenderas a dar tantra, conexion y relax. Sentiras placer al dar placer sensorial mediante masajes guiados por el conocimiento y el sentir con la terapeuta. Aprenderas a disfrutar de dar un masaje sensorial con tules ligeros. Se descubriran mediante las pausas de cada masaje. Disfrutaras de encontrar tu sensualidad y erotismo mediante el tantra, la aromaterapia e iluminacion tenue. Terminacion manual. No hay penetracion.",
   },
   {
     id: "camilla-jacuzzi",
