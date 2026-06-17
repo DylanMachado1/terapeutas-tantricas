@@ -252,7 +252,7 @@ const galleryItems = [
 ];
 
 const ageKey = "terapeutasTantricasAgeOk";
-const whatsappNumber = "";
+const whatsappNumber = "59892067907";
 const mercadoPagoDepositUrl = "";
 const depositAmount = "$1000";
 
