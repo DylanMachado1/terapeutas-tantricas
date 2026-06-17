@@ -21,7 +21,7 @@
         </p>
         <div class="age-actions">
           <button class="btn primary" id="confirmAge">Soy mayor de 21</button>
-          <a class="btn ghost" href="https://www.google.com">Salir</a>
+          <a class="btn ghost" href="about:blank">Salir</a>
         </div>
       </div>
     </div>
@@ -205,8 +205,8 @@
           <p class="eyebrow">Valores</p>
           <h2>Precios y seña</h2>
           <p>
-            La reserva queda confirmada con una seña de $1000. El sistema bloquea
-            el horario para que no pueda ser tomado por otra persona.
+            Para iniciar la reserva se abona una seña de $1000 por Mercado Pago.
+            Luego se coordina dia y horario por WhatsApp enviando el comprobante.
           </p>
         </div>
         <div class="price-grid" id="priceGrid"></div>
@@ -215,14 +215,15 @@
       <section class="booking section-pad" id="reserva">
         <div class="booking-copy">
           <p class="eyebrow">Reserva privada</p>
-          <h2>Elegi tu momento</h2>
+          <h2>Reserva con seña</h2>
           <p>
-            Completa los datos, confirma la seña y el turno queda protegido. El
-            resto del valor se coordina en privado al confirmar la reserva.
+            Elegi la experiencia, abona la seña por Mercado Pago y escribi por
+            WhatsApp con el comprobante para coordinar el dia en privado.
           </p>
           <ul class="booking-notes">
             <li>Solo mayores de 21 anos.</li>
-            <li>Horarios disponibles de 10:00 a 22:00.</li>
+            <li>La seña de $1000 habilita la coordinacion por WhatsApp.</li>
+            <li>Enviar comprobante y experiencia elegida al coordinar.</li>
             <li>Las experiencias con jacuzzi suman 15 minutos de preparacion.</li>
             <li>Cortesia: cafe y jarrita de agua comun o saborizada.</li>
           </ul>
@@ -243,42 +244,27 @@
             Experiencia
             <select id="bookingService" required></select>
           </label>
-          <div class="form-row two">
-            <label>
-              Fecha
-              <input type="date" id="bookingDate" required />
-            </label>
-            <label>
-              Horario
-              <select id="bookingTime" required></select>
-            </label>
-          </div>
           <label>
             Comentario opcional
-            <textarea id="bookingMessage" rows="3" placeholder="Preferencias, dudas o detalles para coordinar"></textarea>
+            <textarea id="bookingMessage" rows="3" placeholder="Preferencias, dudas o detalles para coordinar por WhatsApp"></textarea>
           </label>
           <div class="summary-box" id="summaryBox">
-            <span>Selecciona experiencia, fecha y horario.</span>
+            <span>Selecciona una experiencia para ver el resumen.</span>
+          </div>
+          <div class="payment-actions">
+            <a class="btn ghost full" id="mercadoPagoLink" href="#" target="_blank" rel="noreferrer">Pagar seña por Mercado Pago</a>
           </div>
           <label class="check-line">
             <input type="checkbox" id="depositCheck" required />
-            Confirmo seña de $1000 para bloquear el horario.
+            Ya abone la seña de $1000 y voy a enviar el comprobante por WhatsApp.
           </label>
-          <button class="btn primary full" type="submit">Confirmar reserva</button>
+          <button class="btn primary full" type="submit">Enviar comprobante por WhatsApp</button>
           <p class="form-foot">
-            Demo lista para conectar a Mercado Pago, transferencia o WhatsApp.
+            El dia y horario se coordinan unicamente por WhatsApp una vez abonada la seña.
           </p>
         </form>
       </section>
 
-      <section class="section-pad reservations-panel">
-        <div>
-          <p class="eyebrow">Agenda</p>
-          <h2>Turnos bloqueados</h2>
-          <p>Listado local de reservas confirmadas en este navegador.</p>
-        </div>
-        <div class="reservation-list" id="reservationList"></div>
-      </section>
     </main>
 
     <footer class="site-footer" id="contacto">
