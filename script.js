@@ -167,6 +167,20 @@ const galleryItems = [
   },
   {
     type: "image",
+    src: "assets/optimized/sala-recibimiento.jpg",
+    title: "Sala de recibimiento",
+    label: "Cafe de cortesia",
+    layout: "tall warm",
+  },
+  {
+    type: "image",
+    src: "assets/optimized/ducha-entrada.jpg",
+    title: "Ducha de entrada y retiro",
+    label: "Excesos de aceites",
+    layout: "tall soft",
+  },
+  {
+    type: "image",
     src: "assets/optimized/sahumo.jpg",
     title: "Ritual suave",
     label: "Aromas",
