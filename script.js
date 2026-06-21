@@ -97,13 +97,6 @@ const galleryItems = [
   },
   {
     type: "image",
-    src: "assets/optimized/noa-misterio.jpg",
-    title: "Misterio",
-    label: "Diosa Tantrica",
-    layout: "tall warm",
-  },
-  {
-    type: "image",
     src: "assets/optimized/noa-luz-calida.jpg",
     title: "Luz calida",
     label: "Diosa Tantrica",
