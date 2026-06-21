@@ -76,9 +76,9 @@ const services = [
 const galleryItems = [
   {
     type: "image",
-    src: "assets/optimized/hero-silueta.jpg",
-    title: "Entrada privada",
-    label: "Picardia",
+    src: "assets/optimized/chacra-entrada.jpg",
+    title: "Chacra Tantra exclusiva",
+    label: "Entrada privada",
     layout: "feature warm",
   },
   {
