@@ -181,6 +181,20 @@ const galleryItems = [
   },
   {
     type: "image",
+    src: "assets/optimized/sala-tatami.jpg",
+    title: "Sala Tatami",
+    label: "Espacio preparado",
+    layout: "wide warm",
+  },
+  {
+    type: "image",
+    src: "assets/optimized/sala-jacuzzi-referencia.jpg",
+    title: "Sala jacuzzi",
+    label: "Referencia ambiente",
+    layout: "wide warm",
+  },
+  {
+    type: "image",
     src: "assets/optimized/ducha-entrada.jpg",
     title: "Ducha de entrada y retiro",
     label: "Excesos de aceites",
