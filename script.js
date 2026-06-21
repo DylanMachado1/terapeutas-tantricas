@@ -62,14 +62,14 @@ const services = [
   {
     id: "tatami-jacuzzi",
     title: "Tatami Interactivo con Jacuzzi",
-    label: "Nuestro masaje estrella",
+    label: "Cita tantrica estrella",
     duration: 90,
     price: "USD 500",
     deposit: "$1000",
     featured: true,
     meta: ["Ceremonia del te", "Jacuzzi privado", "Chacra privada"],
     description:
-      "Nuestro masaje estrella. Aqui descubriras el placer de vivir la verdadera experiencia tantra. Sin apuros, con calma y disfrute desde el corazon, te invitamos a disfrutar de este verdadero sentir. Esta terapia fue disenada por nuestra fundadora, con mas de 4 anos de experiencia en estas maravillosas terapias y 10 anos de tantra. Luego de un retiro espiritual y un ano de pausa, viajando y probando diferentes propuestas, trajo a Uruguay esta combinacion armoniosa. Aqui tanto la terapeuta como el paciente saben que viviran el verdadero sentir. La experiencia comienza con la ceremonia del te para abrir el ritual, acompanada por aromaterapia de menta o eucalipto. Encantados por un espacio preparado cuidadosamente, se sumergen en una experiencia tantrica de sensorialidad, conexion y disfrute pleno. Luego de disfrutar el te a eleccion, el jacuzzi relaja los cuerpos, los aromas frescos ayudan a oxigenar la musculatura y el cuerpo queda en perfecta armonia para tenderse en el tatami. La musica suave y las caricias sensoriales de la terapeuta invitan a dejarse llevar. Mas tarde, el aceite de coco y una danza erotica armoniosa con manos, pecho y piernas hacen un solo cuerpo. Al darse vuelta, el paciente se deja envolver por tules suaves, soplidos tibios y tecnicas centrales donde el tantra hace su magia. Aceites de coco y una cuidada estimulacion en las zonas intimas llevan a un orgasmo manual super intenso. Manual y sin penetracion. Luego de cada masaje hay una ducha para retirar excesos de aceite, y un cafecito o limonada de despedida. Un masaje que invita a volver siempre; un masaje que habla del verdadero tantra, sentir, conexion y relax. Chacra privada en Punta del Este. Absoluta discrecion desde el primer mensaje.",
+      "Mas que un masaje tantrico, es una cita tantrica: un momento de disfrute, conexion y relax en un lugar privado, exclusivo y de alto nivel, con discrecion desde el primer mensaje. La experiencia comienza con un cafe o te al lado de la chimenea, una charla armoniosa y una ducha relax. Luego pasas a una sala confortable con tatami, luz tenue, aromas y un ambiente cuidadosamente preparado. La conexion tantrica inicia con caricias suaves y el masaje se vive en tres etapas: masaje sensorial con tules para activar la energia y despertar lentamente la excitacion; masaje con aceites de coco premium organico, relajante al principio y cada vez mas sensual; y una etapa final con aceite tibio, tules, soplidos y tecnicas tantricas orientadas a una descarga manual intensa. Despues se ofrece agua comun o saborizada, una ducha para quitar excesos de aceite con jabon de glicerina sin perfumes y una despedida tranquila. Una verdadera experiencia tantrica, una cita de primer nivel. Manual y sin penetracion.",
   },
 ];
 
@@ -189,8 +189,8 @@ const galleryItems = [
   {
     type: "image",
     src: "assets/optimized/sala-jacuzzi-referencia.jpg",
-    title: "Sala jacuzzi",
-    label: "Referencia ambiente",
+    title: "Experiencia jacuzzi",
+    label: "Ambiente privado",
     layout: "wide warm",
   },
   {
