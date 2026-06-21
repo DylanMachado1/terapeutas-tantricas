@@ -139,17 +139,17 @@ const galleryItems = [
   },
   {
     type: "image",
-    src: "assets/optimized/buda-luz-cercana.jpg",
+    src: "assets/optimized/fondo-velas-rojas.jpg",
     title: "Luz ceremonial",
     label: "Ritual",
     layout: "square warm",
   },
   {
     type: "image",
-    src: "assets/optimized/buda-lampara.jpg",
+    src: "assets/optimized/vela-cuerpo-close.jpg",
     title: "Iluminacion tenue",
-    label: "Calma",
-    layout: "square noir",
+    label: "Insinuante",
+    layout: "square warm",
   },
   {
     type: "image",
@@ -185,13 +185,6 @@ const galleryItems = [
     title: "Silueta",
     label: "Deseo",
     layout: "square soft",
-  },
-  {
-    type: "image",
-    src: "assets/optimized/vela-cuerpo-close.jpg",
-    title: "Calor cercano",
-    label: "Luz",
-    layout: "square warm",
   },
   {
     type: "image",
