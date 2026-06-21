@@ -174,10 +174,31 @@ const galleryItems = [
   },
   {
     type: "image",
+    src: "assets/optimized/camilla-ritual.jpg",
+    title: "Camilla preparada",
+    label: "Ambiente privado",
+    layout: "wide warm",
+  },
+  {
+    type: "image",
     src: "assets/optimized/ducha-entrada.jpg",
     title: "Ducha de entrada y retiro",
     label: "Excesos de aceites",
     layout: "tall soft",
+  },
+  {
+    type: "image",
+    src: "assets/optimized/buda-luz-cercana.jpg",
+    title: "Luz ceremonial",
+    label: "Ritual",
+    layout: "square warm",
+  },
+  {
+    type: "image",
+    src: "assets/optimized/buda-lampara.jpg",
+    title: "Iluminacion tenue",
+    label: "Calma",
+    layout: "square noir",
   },
   {
     type: "image",
