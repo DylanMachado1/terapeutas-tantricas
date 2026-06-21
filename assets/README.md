@@ -1,6 +1,7 @@
 Guarda aca las imagenes con estos nombres para que la web las tome automaticamente:
 
 - chacra-entrada.jpg
+- presencia-chacra.jpg
 - sala-recibimiento.jpg
 - cafe-bienvenida.jpg
 - sala-tatami.jpg

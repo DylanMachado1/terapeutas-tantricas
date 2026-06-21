@@ -83,6 +83,13 @@ const galleryItems = [
   },
   {
     type: "image",
+    src: "assets/optimized/presencia-chacra.jpg",
+    title: "Presencia",
+    label: "Chacra privada",
+    layout: "tall noir",
+  },
+  {
+    type: "image",
     src: "assets/optimized/sala-recibimiento.jpg",
     title: "Sala de recibimiento",
     label: "Cafe de cortesia",
