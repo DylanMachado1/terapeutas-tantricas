@@ -577,7 +577,7 @@ p {
   inset: 0;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(118, 19, 38, 0.78)),
-    url("assets/optimized/noa-finesa.jpg");
+    url("assets/optimized/sala-recibimiento.jpg");
   background-size: cover;
   background-position: center;
   transform: scale(1.04);
@@ -587,7 +587,7 @@ p {
 .therapist-card.male::before {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(118, 19, 38, 0.82)),
-    url("assets/optimized/masaje-espalda.jpg");
+    url("assets/optimized/camilla-ritual.jpg");
   background-size: cover;
   background-position: center;
 }

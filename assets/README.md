@@ -1,23 +1,23 @@
 Guarda aca las imagenes con estos nombres para que la web las tome automaticamente:
 
-- hero-silueta.jpg
-- masaje-pie.jpg
-- flores-tatami.jpg
-- flores-bn.jpg
-- vela-cuerpo.jpg
-- vela-cuerpo-close.jpg
-- tatami-sensual.jpg
+- chacra-entrada.jpg
+- sala-recibimiento.jpg
+- sala-tatami.jpg
+- sala-jacuzzi-referencia.jpg
+- ducha-entrada.jpg
+- camilla-ritual.jpg
+- camilla-ambiente.jpg
+- buda-luz-cercana.jpg
+- buda-lampara.jpg
 - manos-sensoriales.jpg
 - ritual-buda.jpg
 - sahumo.jpg
 - velas-toallas.jpg
-- camilla-ambiente.jpg
-- velas-canela.jpg
-- vela-canasto.jpg
 - aceite-sensorial.jpg
 - sombra-cuerpo.jpg
-- tatami-bn.jpg
-- masaje-espalda.jpg
+- vela-cuerpo-close.jpg
+- velas-canela.jpg
+- vela-canasto.jpg
 - fondo-velas-rojas.jpg
 
 Para videos, guardalos tambien en esta carpeta y agregalos al arreglo `galleryItems`
