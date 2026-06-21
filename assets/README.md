@@ -8,6 +8,9 @@ Guarda aca las imagenes con estos nombres para que la web las tome automaticamen
 - ducha-entrada.jpg
 - camilla-ritual.jpg
 - camilla-ambiente.jpg
+- ritual-esencia.jpg
+- luz-tenue.jpg
+- aromaterapia-vela.jpg
 - buda-luz-cercana.jpg
 - buda-lampara.jpg
 - manos-sensoriales.jpg

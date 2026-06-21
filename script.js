@@ -139,16 +139,16 @@ const galleryItems = [
   },
   {
     type: "image",
-    src: "assets/optimized/fondo-velas-rojas.jpg",
+    src: "assets/optimized/ritual-esencia.jpg",
     title: "Luz ceremonial",
-    label: "Ritual",
+    label: "Esencia",
     layout: "square warm",
   },
   {
     type: "image",
-    src: "assets/optimized/vela-cuerpo-close.jpg",
+    src: "assets/optimized/luz-tenue.jpg",
     title: "Iluminacion tenue",
-    label: "Insinuante",
+    label: "Calma",
     layout: "square warm",
   },
   {
@@ -160,9 +160,9 @@ const galleryItems = [
   },
   {
     type: "image",
-    src: "assets/optimized/sahumo.jpg",
-    title: "Ritual suave",
-    label: "Aromas",
+    src: "assets/optimized/aromaterapia-vela.jpg",
+    title: "Aromaterapia",
+    label: "Ritual",
     layout: "square soft",
   },
   {
