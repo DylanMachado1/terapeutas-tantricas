@@ -83,20 +83,6 @@ const galleryItems = [
   },
   {
     type: "image",
-    src: "assets/optimized/manos-sensoriales.jpg",
-    title: "Respirar y sentir",
-    label: "Conexion",
-    layout: "square soft",
-  },
-  {
-    type: "image",
-    src: "assets/optimized/ritual-buda.jpg",
-    title: "Energia",
-    label: "Tantra",
-    layout: "square",
-  },
-  {
-    type: "image",
     src: "assets/optimized/sala-recibimiento.jpg",
     title: "Sala de recibimiento",
     label: "Cafe de cortesia",
@@ -111,9 +97,23 @@ const galleryItems = [
   },
   {
     type: "image",
+    src: "assets/optimized/ducha-entrada.jpg",
+    title: "Ducha de entrada y retiro",
+    label: "Excesos de aceites",
+    layout: "tall warm",
+  },
+  {
+    type: "image",
     src: "assets/optimized/camilla-ritual.jpg",
     title: "Camilla preparada",
     label: "Ambiente privado",
+    layout: "wide warm",
+  },
+  {
+    type: "image",
+    src: "assets/optimized/camilla-ambiente.jpg",
+    title: "Camilla",
+    label: "Privado",
     layout: "wide warm",
   },
   {
@@ -132,10 +132,10 @@ const galleryItems = [
   },
   {
     type: "image",
-    src: "assets/optimized/ducha-entrada.jpg",
-    title: "Ducha de entrada y retiro",
-    label: "Excesos de aceites",
-    layout: "tall soft",
+    src: "assets/optimized/velas-canela.jpg",
+    title: "Aromas suaves",
+    label: "Ambiente",
+    layout: "wide warm",
   },
   {
     type: "image",
@@ -153,6 +153,13 @@ const galleryItems = [
   },
   {
     type: "image",
+    src: "assets/optimized/ritual-buda.jpg",
+    title: "Energia",
+    label: "Tantra",
+    layout: "square",
+  },
+  {
+    type: "image",
     src: "assets/optimized/sahumo.jpg",
     title: "Ritual suave",
     label: "Aromas",
@@ -160,17 +167,10 @@ const galleryItems = [
   },
   {
     type: "image",
-    src: "assets/optimized/velas-toallas.jpg",
-    title: "Cuidado premium",
-    label: "Relax",
+    src: "assets/optimized/manos-sensoriales.jpg",
+    title: "Respirar y sentir",
+    label: "Conexion",
     layout: "square soft",
-  },
-  {
-    type: "image",
-    src: "assets/optimized/camilla-ambiente.jpg",
-    title: "Camilla",
-    label: "Privado",
-    layout: "wide soft",
   },
   {
     type: "image",
@@ -188,17 +188,17 @@ const galleryItems = [
   },
   {
     type: "image",
-    src: "assets/optimized/vela-canasto.jpg",
-    title: "Pausa",
-    label: "Calma",
+    src: "assets/optimized/velas-toallas.jpg",
+    title: "Cuidado premium",
+    label: "Relax",
     layout: "square soft",
   },
   {
     type: "image",
-    src: "assets/optimized/velas-canela.jpg",
-    title: "Aromas suaves",
-    label: "Ambiente",
-    layout: "wide warm",
+    src: "assets/optimized/vela-canasto.jpg",
+    title: "Pausa",
+    label: "Calma",
+    layout: "square soft",
   },
 ];
 
