@@ -2,6 +2,7 @@ Guarda aca las imagenes con estos nombres para que la web las tome automaticamen
 
 - chacra-entrada.jpg
 - sala-recibimiento.jpg
+- cafe-bienvenida.jpg
 - sala-tatami.jpg
 - sala-jacuzzi-referencia.jpg
 - ducha-entrada.jpg

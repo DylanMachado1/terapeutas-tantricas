@@ -104,6 +104,13 @@ const galleryItems = [
   },
   {
     type: "image",
+    src: "assets/optimized/cafe-bienvenida.jpg",
+    title: "Cafe de bienvenida",
+    label: "Cortesia",
+    layout: "tall warm",
+  },
+  {
+    type: "image",
     src: "assets/optimized/camilla-ritual.jpg",
     title: "Camilla preparada",
     label: "Ambiente privado",
