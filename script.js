@@ -77,6 +77,13 @@ const galleryItems = [
   },
   {
     type: "image",
+    src: "assets/optimized/buda-jardin-atardecer.jpeg",
+    title: "Jardin de calma",
+    label: "Chacra privada",
+    layout: "tall warm",
+  },
+  {
+    type: "image",
     src: "assets/optimized/sala-recibimiento.jpg",
     title: "Sala de recibimiento",
     label: "Cafe de cortesia",
@@ -95,6 +102,13 @@ const galleryItems = [
     title: "Ducha de entrada y retiro",
     label: "Excesos de aceites",
     layout: "tall warm",
+  },
+  {
+    type: "image",
+    src: "assets/optimized/bata-blanca-luz.jpeg",
+    title: "Ducha anexa",
+    label: "Pulcritud",
+    layout: "tall soft",
   },
   {
     type: "image",
@@ -119,10 +133,24 @@ const galleryItems = [
   },
   {
     type: "image",
+    src: "assets/optimized/sala-tatami-roja.jpeg",
+    title: "Tatami ceremonial",
+    label: "Luz tenue",
+    layout: "wide warm",
+  },
+  {
+    type: "image",
     src: "assets/optimized/sala-jacuzzi-referencia.jpg",
     title: "Experiencia jacuzzi",
     label: "Ambiente privado",
     layout: "wide warm",
+  },
+  {
+    type: "image",
+    src: "assets/optimized/agua-limon-bienvenida.jpeg",
+    title: "Agua saborizada",
+    label: "Despues del jacuzzi",
+    layout: "tall soft",
   },
   {
     type: "image",
@@ -164,6 +192,13 @@ const galleryItems = [
     src: "assets/optimized/manos-sensoriales.jpg",
     title: "Respirar y sentir",
     label: "Conexion",
+    layout: "square soft",
+  },
+  {
+    type: "image",
+    src: "assets/optimized/conexion-manos-luz.jpeg",
+    title: "Conexion tantrica",
+    label: "Sentir",
     layout: "square soft",
   },
   {
