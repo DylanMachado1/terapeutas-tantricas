@@ -18,6 +18,7 @@ const mimeTypes = {
   ".svg": "image/svg+xml",
   ".mp4": "video/mp4",
   ".mov": "video/quicktime",
+  ".ogg": "audio/ogg",
 };
 
 function sendFile(res, filePath) {
