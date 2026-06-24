@@ -90,6 +90,14 @@ const galleryItems = [
     layout: "tall warm",
   },
   {
+    type: "video",
+    src: "assets/optimized/video-ritual-recibimiento.mp4",
+    poster: "assets/optimized/sala-recibimiento.jpg",
+    title: "Bienvenida ritual",
+    label: "Cortesia",
+    layout: "tall warm",
+  },
+  {
     type: "image",
     src: "assets/optimized/cafe-bienvenida.jpg",
     title: "Cafe de bienvenida",
@@ -135,7 +143,15 @@ const galleryItems = [
     type: "image",
     src: "assets/optimized/sala-tatami-roja.jpeg",
     title: "Tatami ceremonial",
-    label: "Luz tenue",
+    label: "Ceremonia privada",
+    layout: "wide warm",
+  },
+  {
+    type: "video",
+    src: "assets/optimized/video-tatami-detalle.mp4",
+    poster: "assets/optimized/sala-tatami-roja.jpeg",
+    title: "Tatami en calma",
+    label: "Ritual",
     layout: "wide warm",
   },
   {
@@ -143,6 +159,14 @@ const galleryItems = [
     src: "assets/optimized/sala-jacuzzi-referencia.jpg",
     title: "Experiencia jacuzzi",
     label: "Ambiente privado",
+    layout: "wide warm",
+  },
+  {
+    type: "video",
+    src: "assets/optimized/video-jacuzzi-ambiente.mp4",
+    poster: "assets/optimized/sala-jacuzzi-referencia.jpg",
+    title: "Jacuzzi privado",
+    label: "Relax",
     layout: "wide warm",
   },
   {
@@ -169,7 +193,7 @@ const galleryItems = [
   {
     type: "image",
     src: "assets/optimized/luz-tenue.jpg",
-    title: "Iluminacion tenue",
+    title: "Claridad suave",
     label: "Calma",
     layout: "square warm",
   },
