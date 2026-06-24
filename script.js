@@ -67,6 +67,8 @@ const services = [
   },
 ];
 
+const jacuzziAvailableFrom = "15/07/2026";
+
 const galleryItems = [
   {
     type: "image",
@@ -396,7 +398,12 @@ function isSlotAvailable(date, time, service) {
 function renderServices() {
   els.serviceGrid.innerHTML = services
     .map(
-      (service) => `
+      (service) => {
+        const jacuzziNotice = service.id.includes("jacuzzi")
+          ? `<div class="service-notice">Reservas con jacuzzi disponibles a partir del ${jacuzziAvailableFrom}.</div>`
+          : "";
+
+        return `
         <article class="service-card ${service.featured ? "featured" : ""}">
           <div class="service-top">
             <div>
@@ -406,12 +413,14 @@ function renderServices() {
             <span class="currency-pill">${service.duration} min</span>
           </div>
           <p>${service.description}</p>
+          ${jacuzziNotice}
           <div class="service-meta">
             ${service.meta.map((item) => `<span>${item}</span>`).join("")}
           </div>
           <a class="btn ghost" href="#reserva" data-service="${service.id}">Reservar</a>
         </article>
-      `
+      `;
+      }
     )
     .join("");
 

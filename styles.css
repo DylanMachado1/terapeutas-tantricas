@@ -468,6 +468,18 @@ p {
   font-size: 14px;
 }
 
+.service-notice {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border: 1px solid rgba(181, 31, 53, 0.2);
+  border-radius: 14px;
+  background: rgba(181, 31, 53, 0.08);
+  color: var(--red-deep);
+  font-size: 12px;
+  font-weight: 850;
+  line-height: 1.45;
+}
+
 .service-meta {
   display: flex;
   flex-wrap: wrap;
