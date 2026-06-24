@@ -210,7 +210,7 @@ const reservedBookingsKey = "clubTantricoReservedBookings";
 const bookingWindowDays = 14;
 const scheduleStartMinutes = 8 * 60;
 const scheduleEndMinutes = 20 * 60;
-const scheduleStepMinutes = 30;
+const scheduleStepMinutes = 60;
 const reservedBookings = [
   // Cuando conectemos el backend, esta lista se reemplaza por reservas reales del servidor.
   // { date: "2026-06-25", time: "10:00", duration: 60 },
