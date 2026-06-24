@@ -5,7 +5,6 @@ const services = [
     label: "Relax profundo",
     duration: 50,
     price: "$5000",
-    deposit: "$1000",
     featured: false,
     meta: ["Camilla profesional", "Masaje relajante profundo", "Aceites tibios"],
     description:
@@ -17,7 +16,6 @@ const services = [
     label: "Conexion participativa",
     duration: 60,
     price: "$12000",
-    deposit: "$1000",
     featured: true,
     meta: ["Masaje profesional", "Aprendizaje sensorial", "Ambiente privado"],
     description:
@@ -29,7 +27,6 @@ const services = [
     label: "Ritual completo",
     duration: 75,
     price: "USD 400",
-    deposit: "$1000",
     featured: true,
     meta: ["15 min de jacuzzi", "Eucalipto", "Camilla interactiva"],
     description:
@@ -41,7 +38,6 @@ const services = [
     label: "Sensualidad intensa",
     duration: 50,
     price: "$8000",
-    deposit: "$1000",
     featured: false,
     meta: ["Tatami profesional", "Piel a piel", "Aceites tibios"],
     description:
@@ -53,7 +49,6 @@ const services = [
     label: "Tantra a flor de piel",
     duration: 75,
     price: "USD 400",
-    deposit: "$1000",
     featured: true,
     meta: ["Experiencia interactiva", "Aceites premium", "Conexion"],
     description:
@@ -65,7 +60,6 @@ const services = [
     label: "Cita tantrica estrella",
     duration: 90,
     price: "USD 500",
-    deposit: "$1000",
     featured: true,
     meta: ["Ceremonia del te", "Jacuzzi privado", "Chacra privada"],
     description:
@@ -211,8 +205,7 @@ const galleryItems = [
 
 const ageKey = "terapeutasTantricasAgeOk";
 const whatsappNumber = "59892067907";
-const mercadoPagoDepositUrl = "";
-const depositAmount = "$1000";
+const mercadoPagoDepositUrl = "https://link.mercadopago.com.uy/reservaclub";
 
 const els = {
   ageGate: document.querySelector("#ageGate"),
@@ -224,13 +217,30 @@ const els = {
   priceGrid: document.querySelector("#priceGrid"),
   bookingForm: document.querySelector("#bookingForm"),
   bookingService: document.querySelector("#bookingService"),
+  paymentOption: document.querySelector("#paymentOption"),
   mercadoPagoLink: document.querySelector("#mercadoPagoLink"),
+  depositCheck: document.querySelector("#depositCheck"),
+  bookingDate: document.querySelector("#bookingDate"),
+  bookingTime: document.querySelector("#bookingTime"),
+  calendarLock: document.querySelector("#calendarLock"),
   summaryBox: document.querySelector("#summaryBox"),
   toast: document.querySelector("#toast"),
 };
 
 function moneyLabel(service) {
-  return `${service.price} · Seña ${service.deposit}`;
+  return service.price;
+}
+
+function paymentChoiceLabel() {
+  return els.paymentOption.value === "100" ? "Total del servicio" : "50% del servicio";
+}
+
+function partialAmount(service, percent) {
+  const match = service.price.match(/^(USD|\$)\s?(\d+)/i);
+  if (!match) return service.price;
+  const currency = match[1].toUpperCase() === "USD" ? "USD" : "$";
+  const value = Math.round((Number(match[2]) * percent) / 100);
+  return currency === "USD" ? `USD ${value}` : `$${value}`;
 }
 
 function selectedService() {
@@ -274,7 +284,7 @@ function renderPrices() {
         <article class="price-card">
           <p class="eyebrow">${service.title}</p>
           <strong>${service.price}</strong>
-          <small>Duracion ${service.duration} min · Seña por Mercado Pago $1000</small>
+          <small>Duracion ${service.duration} min · Reserva abonando 50% o total</small>
         </article>
       `
     )
@@ -334,34 +344,49 @@ function fillServiceSelect() {
 
 function updateSummary() {
   const service = selectedService();
+  const percent = Number(els.paymentOption.value || 50);
+  const amount = partialAmount(service, percent);
   els.summaryBox.innerHTML = `
     <strong>${service.title}</strong><br>
     Duracion: ${service.duration} min<br>
-    Valor: ${service.price} · Seña Mercado Pago: ${depositAmount}<br>
-    Despues del pago, envia el comprobante por WhatsApp para coordinar dia y horario.
+    Valor: ${service.price}<br>
+    Pago elegido: ${paymentChoiceLabel()} · ${amount}<br>
+    Primero paga por Mercado Pago. Luego se habilita el calendario y se envia el comprobante por WhatsApp o Instagram.
   `;
 }
 
 function updatePaymentLink() {
-  if (mercadoPagoDepositUrl) {
-    els.mercadoPagoLink.href = mercadoPagoDepositUrl;
-    els.mercadoPagoLink.textContent = `Pagar seña ${depositAmount} por Mercado Pago`;
-    return;
-  }
-
-  const text = encodeURIComponent(
-    `Hola, quiero pagar la seña de ${depositAmount} por Mercado Pago para coordinar una reserva.`
-  );
-  els.mercadoPagoLink.href = whatsappNumber ? `https://wa.me/${whatsappNumber}?text=${text}` : `https://wa.me/?text=${text}`;
-  els.mercadoPagoLink.textContent = `Solicitar link de Mercado Pago`;
+  els.mercadoPagoLink.href = mercadoPagoDepositUrl;
+  els.mercadoPagoLink.textContent = "Pagar 50% o total por Mercado Pago";
 }
 
-function buildWhatsAppText(service, name, phone, message) {
+function updateCalendarLock() {
+  const isPaid = els.depositCheck.checked;
+  els.bookingDate.disabled = !isPaid;
+  els.bookingTime.disabled = !isPaid;
+  els.calendarLock.textContent = isPaid
+    ? "Calendario habilitado. Elegi dia y horario de preferencia."
+    : "El calendario se desbloquea al confirmar que ya realizaste el pago.";
+  els.calendarLock.classList.toggle("unlocked", isPaid);
+}
+
+function setMinimumBookingDate() {
+  const today = new Date();
+  const offset = today.getTimezoneOffset() * 60000;
+  els.bookingDate.min = new Date(today.getTime() - offset).toISOString().slice(0, 10);
+}
+
+function buildWhatsAppText(service, name, phone, message, date, time) {
+  const percent = Number(els.paymentOption.value || 50);
+  const amount = partialAmount(service, percent);
   const lines = [
-    `Hola, ya abone la seña de ${depositAmount} por Mercado Pago y quiero coordinar mi reserva.`,
+    "Hola, ya abone por Mercado Pago y quiero confirmar mi reserva.",
     `Experiencia elegida: ${service.title}`,
     `Valor de la experiencia: ${service.price}`,
-    "Adjunto el comprobante de la seña en este chat.",
+    `Pago realizado: ${paymentChoiceLabel()} (${amount})`,
+    date ? `Dia elegido: ${date}` : "",
+    time ? `Horario elegido: ${time}` : "",
+    "Adjunto el comprobante de pago en este chat.",
     name ? `Nombre: ${name}` : "",
     phone ? `WhatsApp: ${phone}` : "",
     message ? `Comentario: ${message}` : "",
@@ -382,11 +407,13 @@ function submitBooking(event) {
   const name = document.querySelector("#clientName").value.trim();
   const phone = document.querySelector("#clientPhone").value.trim();
   const message = document.querySelector("#bookingMessage").value.trim();
-  const text = encodeURIComponent(buildWhatsAppText(service, name, phone, message));
+  const date = els.bookingDate.value;
+  const time = els.bookingTime.value;
+  const text = encodeURIComponent(buildWhatsAppText(service, name, phone, message, date, time));
   const target = whatsappNumber ? `https://wa.me/${whatsappNumber}?text=${text}` : `https://wa.me/?text=${text}`;
 
   window.open(target, "_blank", "noopener,noreferrer");
-  showToast("WhatsApp abierto. Envia ahi el comprobante de la seña y la experiencia elegida.");
+  showToast("WhatsApp abierto. Envia ahi el comprobante de pago. Tambien puede enviarse por Instagram.");
 }
 
 function initAgeGate() {
@@ -415,9 +442,13 @@ function init() {
   fillServiceSelect();
   updatePaymentLink();
   updateSummary();
+  setMinimumBookingDate();
+  updateCalendarLock();
   initAgeGate();
 
   els.bookingService.addEventListener("change", updateSummary);
+  els.paymentOption.addEventListener("change", updateSummary);
+  els.depositCheck.addEventListener("change", updateCalendarLock);
   els.bookingForm.addEventListener("submit", submitBooking);
   els.menuToggle.addEventListener("click", () => els.mainNav.classList.toggle("open"));
   els.mainNav.querySelectorAll("a").forEach((link) => {

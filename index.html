@@ -6,7 +6,7 @@
     <title>Club de Señores | Tantra & Relax</title>
     <meta
       name="description"
-      content="Club privado de experiencias tantricas, jacuzzi, camilla, tatami y rituales sensoriales de alto nivel. Reservas privadas con seña online."
+      content="Club privado de experiencias tantricas, jacuzzi, camilla, tatami y rituales sensoriales de alto nivel. Reservas privadas por Mercado Pago."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -173,8 +173,9 @@
           <p class="eyebrow">Terapeutas</p>
           <h2>Terapeutas femeninas</h2>
           <p>
-            La reserva se inicia con sena por Mercado Pago y luego se coordina
-            en privado por WhatsApp. Todas las sesiones son realizadas por
+            La reserva se inicia abonando el 50% o el total por Mercado Pago.
+            Luego se confirma por WhatsApp o Instagram con el comprobante.
+            Todas las sesiones son realizadas por
             terapeutas femeninas, con atencion profesional, privacidad total y
             un trato calido en cada detalle.
           </p>
@@ -203,10 +204,11 @@
       <section class="section-pad price-band" id="precios">
         <div class="section-heading">
           <p class="eyebrow">Valores</p>
-          <h2>Precios y seña</h2>
+          <h2>Precios y reserva</h2>
           <p>
-            Para iniciar la reserva se abona una seña de $1000 por Mercado Pago.
-            Luego se coordina dia y horario por WhatsApp enviando el comprobante.
+            Para desbloquear el calendario se abona el 50% o el total del
+            servicio por Mercado Pago. Luego se envia el comprobante por
+            WhatsApp o Instagram para confirmar la reserva.
           </p>
         </div>
         <div class="price-grid" id="priceGrid"></div>
@@ -215,15 +217,17 @@
       <section class="booking section-pad" id="reserva">
         <div class="booking-copy">
           <p class="eyebrow">Reserva privada</p>
-          <h2>Reserva con seña</h2>
+          <h2>Reserva por la pagina</h2>
           <p>
-            Elegi la experiencia, abona la seña por Mercado Pago y escribi por
-            WhatsApp con el comprobante para coordinar el dia en privado.
+            Elegi la experiencia, abona el 50% o el total por Mercado Pago y
+            luego desbloquea el calendario para elegir dia y horario. El
+            comprobante se envia por WhatsApp o Instagram.
           </p>
           <ul class="booking-notes">
             <li>Solo mayores de 21 anos.</li>
-            <li>La seña de $1000 habilita la coordinacion por WhatsApp.</li>
-            <li>Enviar comprobante y experiencia elegida al coordinar.</li>
+            <li>El calendario se habilita solo despues de abonar por Mercado Pago.</li>
+            <li>Se puede abonar el 50% o el total del servicio elegido.</li>
+            <li>Enviar comprobante, experiencia elegida, dia y horario por WhatsApp o Instagram.</li>
             <li>Las experiencias con jacuzzi suman 15 minutos de preparacion.</li>
             <li>Cortesia: cafe y jarrita de agua comun o saborizada.</li>
           </ul>
@@ -245,6 +249,13 @@
             <select id="bookingService" required></select>
           </label>
           <label>
+            Pago a realizar
+            <select id="paymentOption" required>
+              <option value="50">Abonar 50% del servicio</option>
+              <option value="100">Abonar total del servicio</option>
+            </select>
+          </label>
+          <label>
             Comentario opcional
             <textarea id="bookingMessage" rows="3" placeholder="Preferencias, dudas o detalles para coordinar por WhatsApp"></textarea>
           </label>
@@ -252,15 +263,28 @@
             <span>Selecciona una experiencia para ver el resumen.</span>
           </div>
           <div class="payment-actions">
-            <a class="btn ghost full" id="mercadoPagoLink" href="#" target="_blank" rel="noreferrer">Pagar seña por Mercado Pago</a>
+            <a class="btn ghost full" id="mercadoPagoLink" href="#" target="_blank" rel="noreferrer">Pagar por Mercado Pago</a>
           </div>
           <label class="check-line">
             <input type="checkbox" id="depositCheck" required />
-            Ya abone la seña de $1000 y voy a enviar el comprobante por WhatsApp.
+            Ya abone por Mercado Pago y voy a enviar el comprobante por WhatsApp o Instagram.
           </label>
+          <div class="calendar-lock" id="calendarLock">
+            El calendario se desbloquea al confirmar que ya realizaste el pago.
+          </div>
+          <div class="form-row two">
+            <label>
+              Dia de preferencia
+              <input type="date" id="bookingDate" required disabled />
+            </label>
+            <label>
+              Horario de preferencia
+              <input type="time" id="bookingTime" required disabled />
+            </label>
+          </div>
           <button class="btn primary full" type="submit">Enviar comprobante por WhatsApp</button>
           <p class="form-foot">
-            El dia y horario se coordinan unicamente por WhatsApp una vez abonada la seña.
+            La reserva queda sujeta a confirmacion final luego de revisar el comprobante.
           </p>
         </form>
       </section>
