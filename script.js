@@ -206,6 +206,15 @@ const galleryItems = [
 const ageKey = "terapeutasTantricasAgeOk";
 const whatsappNumber = "59892067907";
 const mercadoPagoDepositUrl = "https://link.mercadopago.com.uy/reservaclub";
+const reservedBookingsKey = "clubTantricoReservedBookings";
+const bookingWindowDays = 14;
+const scheduleStartMinutes = 8 * 60;
+const scheduleEndMinutes = 20 * 60;
+const scheduleStepMinutes = 30;
+const reservedBookings = [
+  // Cuando conectemos el backend, esta lista se reemplaza por reservas reales del servidor.
+  // { date: "2026-06-25", time: "10:00", duration: 60 },
+];
 
 const els = {
   ageGate: document.querySelector("#ageGate"),
@@ -223,6 +232,10 @@ const els = {
   bookingDate: document.querySelector("#bookingDate"),
   bookingTime: document.querySelector("#bookingTime"),
   calendarLock: document.querySelector("#calendarLock"),
+  bookingCalendar: document.querySelector("#bookingCalendar"),
+  dateGrid: document.querySelector("#dateGrid"),
+  timeGrid: document.querySelector("#timeGrid"),
+  selectedSchedule: document.querySelector("#selectedSchedule"),
   summaryBox: document.querySelector("#summaryBox"),
   toast: document.querySelector("#toast"),
 };
@@ -245,6 +258,80 @@ function partialAmount(service, percent) {
 
 function selectedService() {
   return services.find((service) => service.id === els.bookingService.value) || services[0];
+}
+
+function toLocalDateISO(date) {
+  const offset = date.getTimezoneOffset() * 60000;
+  return new Date(date.getTime() - offset).toISOString().slice(0, 10);
+}
+
+function formatDateTitle(date) {
+  return new Intl.DateTimeFormat("es-UY", { weekday: "short", day: "numeric" }).format(date);
+}
+
+function formatDateSubtitle(date) {
+  return new Intl.DateTimeFormat("es-UY", { month: "short" }).format(date);
+}
+
+function minutesToTime(minutes) {
+  const hours = String(Math.floor(minutes / 60)).padStart(2, "0");
+  const mins = String(minutes % 60).padStart(2, "0");
+  return `${hours}:${mins}`;
+}
+
+function timeToMinutes(time) {
+  const [hours, mins] = time.split(":").map(Number);
+  return hours * 60 + mins;
+}
+
+function loadReservedBookings() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(reservedBookingsKey) || "[]");
+    return [...reservedBookings, ...saved];
+  } catch {
+    return reservedBookings;
+  }
+}
+
+function saveReservedBooking(date, time, service) {
+  try {
+    const saved = JSON.parse(localStorage.getItem(reservedBookingsKey) || "[]");
+    const next = [
+      ...saved,
+      {
+        date,
+        time,
+        duration: service.duration,
+        service: service.title,
+      },
+    ];
+    localStorage.setItem(reservedBookingsKey, JSON.stringify(next));
+  } catch {
+    // Si el navegador bloquea localStorage, la reserva igual sigue por WhatsApp.
+  }
+}
+
+function isPastSlot(date, time) {
+  const today = toLocalDateISO(new Date());
+  if (date !== today) return false;
+  return timeToMinutes(time) <= new Date().getHours() * 60 + new Date().getMinutes();
+}
+
+function isReservedSlot(date, time, service) {
+  const start = timeToMinutes(time);
+  const end = start + service.duration;
+
+  return loadReservedBookings().some((booking) => {
+    if (booking.date !== date) return false;
+    const bookedStart = timeToMinutes(booking.time);
+    const bookedEnd = bookedStart + Number(booking.duration || 60);
+    return start < bookedEnd && end > bookedStart;
+  });
+}
+
+function isSlotAvailable(date, time, service) {
+  const start = timeToMinutes(time);
+  return start <= scheduleEndMinutes && !isPastSlot(date, time) && !isReservedSlot(date, time, service);
 }
 
 function renderServices() {
@@ -342,6 +429,82 @@ function fillServiceSelect() {
     .join("");
 }
 
+function renderDatePicker() {
+  const isPaid = els.depositCheck.checked;
+  const today = new Date();
+  const selectedDate = els.bookingDate.value || toLocalDateISO(today);
+
+  els.dateGrid.innerHTML = Array.from({ length: bookingWindowDays }, (_, index) => {
+    const date = new Date(today);
+    date.setDate(today.getDate() + index);
+    const iso = toLocalDateISO(date);
+    const isSelected = iso === selectedDate;
+    const label = index === 0 ? "Hoy" : formatDateTitle(date);
+
+    return `
+      <button class="date-chip ${isSelected ? "selected" : ""}" type="button" data-date="${iso}" ${isPaid ? "" : "disabled"}>
+        <span>${label}</span>
+        <small>${formatDateSubtitle(date)}</small>
+      </button>
+    `;
+  }).join("");
+
+  if (!els.bookingDate.value) {
+    els.bookingDate.value = selectedDate;
+  }
+
+  els.dateGrid.querySelectorAll("[data-date]").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (!els.depositCheck.checked) return;
+      els.bookingDate.value = button.dataset.date;
+      els.bookingTime.value = "";
+      renderDatePicker();
+      renderTimePicker();
+    });
+  });
+}
+
+function renderTimePicker() {
+  const isPaid = els.depositCheck.checked;
+  const service = selectedService();
+  const selectedDate = els.bookingDate.value;
+  const selectedTime = els.bookingTime.value;
+
+  els.selectedSchedule.textContent = selectedDate
+    ? new Intl.DateTimeFormat("es-UY", { weekday: "long", day: "numeric", month: "long" }).format(
+        new Date(`${selectedDate}T12:00:00`)
+      )
+    : "Selecciona una fecha";
+
+  const slots = [];
+  for (let minutes = scheduleStartMinutes; minutes <= scheduleEndMinutes; minutes += scheduleStepMinutes) {
+    const time = minutesToTime(minutes);
+    const available = selectedDate && isSlotAvailable(selectedDate, time, service);
+    const isSelected = selectedTime === time;
+    slots.push(`
+      <button class="time-chip ${isSelected ? "selected" : ""} ${available ? "" : "reserved"}" type="button" data-time="${time}" ${isPaid && available ? "" : "disabled"}>
+        <span>${time}</span>
+        <small>${available ? "Disponible" : "Ocupado"}</small>
+      </button>
+    `);
+  }
+
+  els.timeGrid.innerHTML = slots.join("");
+
+  els.timeGrid.querySelectorAll("[data-time]").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (!els.depositCheck.checked || button.disabled) return;
+      els.bookingTime.value = button.dataset.time;
+      renderTimePicker();
+    });
+  });
+}
+
+function updateSchedulePicker() {
+  renderDatePicker();
+  renderTimePicker();
+}
+
 function updateSummary() {
   const service = selectedService();
   const percent = Number(els.paymentOption.value || 50);
@@ -362,18 +525,12 @@ function updatePaymentLink() {
 
 function updateCalendarLock() {
   const isPaid = els.depositCheck.checked;
-  els.bookingDate.disabled = !isPaid;
-  els.bookingTime.disabled = !isPaid;
+  els.bookingCalendar.setAttribute("aria-disabled", String(!isPaid));
   els.calendarLock.textContent = isPaid
-    ? "Calendario habilitado. Elegi dia y horario de preferencia."
+    ? "Calendario habilitado. Elegi una fecha y un horario disponible."
     : "El calendario se desbloquea al confirmar que ya realizaste el pago.";
   els.calendarLock.classList.toggle("unlocked", isPaid);
-}
-
-function setMinimumBookingDate() {
-  const today = new Date();
-  const offset = today.getTimezoneOffset() * 60000;
-  els.bookingDate.min = new Date(today.getTime() - offset).toISOString().slice(0, 10);
+  updateSchedulePicker();
 }
 
 function buildWhatsAppText(service, name, phone, message, date, time) {
@@ -409,9 +566,24 @@ function submitBooking(event) {
   const message = document.querySelector("#bookingMessage").value.trim();
   const date = els.bookingDate.value;
   const time = els.bookingTime.value;
+
+  if (!date || !time) {
+    showToast("Elegí una fecha y un horario disponible para continuar.");
+    return;
+  }
+
+  if (!isSlotAvailable(date, time, service)) {
+    els.bookingTime.value = "";
+    updateSchedulePicker();
+    showToast("Ese horario ya no esta disponible. Elegí otro turno.");
+    return;
+  }
+
   const text = encodeURIComponent(buildWhatsAppText(service, name, phone, message, date, time));
   const target = whatsappNumber ? `https://wa.me/${whatsappNumber}?text=${text}` : `https://wa.me/?text=${text}`;
 
+  saveReservedBooking(date, time, service);
+  updateSchedulePicker();
   window.open(target, "_blank", "noopener,noreferrer");
   showToast("WhatsApp abierto. Envia ahi el comprobante de pago. Tambien puede enviarse por Instagram.");
 }
@@ -442,11 +614,14 @@ function init() {
   fillServiceSelect();
   updatePaymentLink();
   updateSummary();
-  setMinimumBookingDate();
   updateCalendarLock();
   initAgeGate();
 
-  els.bookingService.addEventListener("change", updateSummary);
+  els.bookingService.addEventListener("change", () => {
+    els.bookingTime.value = "";
+    updateSummary();
+    updateSchedulePicker();
+  });
   els.paymentOption.addEventListener("change", updateSummary);
   els.depositCheck.addEventListener("change", updateCalendarLock);
   els.bookingForm.addEventListener("submit", submitBooking);

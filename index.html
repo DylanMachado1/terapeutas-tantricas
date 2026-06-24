@@ -272,15 +272,25 @@
           <div class="calendar-lock" id="calendarLock">
             El calendario se desbloquea al confirmar que ya realizaste el pago.
           </div>
-          <div class="form-row two">
-            <label>
-              Dia de preferencia
-              <input type="date" id="bookingDate" required disabled />
-            </label>
-            <label>
-              Horario de preferencia
-              <input type="time" id="bookingTime" required disabled />
-            </label>
+          <div class="booking-calendar" id="bookingCalendar" aria-disabled="true">
+            <input type="hidden" id="bookingDate" />
+            <input type="hidden" id="bookingTime" />
+            <div class="calendar-head">
+              <div>
+                <span>Elegir fecha</span>
+                <strong>Agenda privada</strong>
+              </div>
+              <small>Atencion de 08:00 a 20:00</small>
+            </div>
+            <div class="date-grid" id="dateGrid" aria-label="Dias disponibles"></div>
+            <div class="time-head">
+              <span>Horarios disponibles</span>
+              <small id="selectedSchedule">Selecciona una fecha</small>
+            </div>
+            <div class="time-grid" id="timeGrid" aria-label="Horarios disponibles"></div>
+            <p class="calendar-hint">
+              Los horarios ocupados se bloquean automaticamente para evitar reservas superpuestas.
+            </p>
           </div>
           <button class="btn primary full" type="submit">Enviar comprobante por WhatsApp</button>
           <p class="form-foot">
