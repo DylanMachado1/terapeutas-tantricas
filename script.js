@@ -7,6 +7,8 @@ const services = [
     price: "$5000",
     featured: false,
     meta: ["Camilla profesional", "Masaje relajante profundo", "Aceites tibios"],
+    audio: "assets/optimized/audio-ritual-01.ogg",
+    audioLabel: "Audio Camilla",
     description:
       "Una experiencia profesional en camilla para relajar el cuerpo, oxigenar los musculos y bajar el estres acumulado. Aqui enfatizamos un verdadero masaje relajante. Comenzamos con un masaje sensorial que se realiza con tules suaves, luego un masaje relajante profundo con aceites de coco que poco a poco se convierte en erotico y sensual. Dando una terminacion erotica manual. Sin penetracion.",
   },
@@ -18,6 +20,8 @@ const services = [
     price: "$12000",
     featured: true,
     meta: ["Masaje profesional", "Aprendizaje sensorial", "Ambiente privado"],
+    audio: "assets/optimized/audio-ritual-02.ogg",
+    audioLabel: "Audio Camilla Interactiva",
     description:
       "Una experiencia mas cercana al sentir y dar la caricia consciente. Te permitiras interactuar con la terapeuta mediante la verdadera conexion del sentir en tres masajes. Permitiendo descubrir tecnicas con la masajista que elevan el sentir sensorial, sensual y erotico. Aqui aprenderas a dar tantra, conexion y relax. Sentiras placer al dar placer sensorial mediante masajes guiados por el conocimiento y el sentir con la terapeuta. Aprenderas a disfrutar de dar un masaje sensorial con tules ligeros. Se descubriran mediante las pausas de cada masaje. Disfrutaras de encontrar tu sensualidad y erotismo mediante el tantra, la aromaterapia e iluminacion tenue. Terminacion manual. No hay penetracion.",
   },
@@ -40,6 +44,8 @@ const services = [
     price: "$8000",
     featured: false,
     meta: ["Tatami profesional", "Piel a piel", "Aceites tibios"],
+    audio: "assets/optimized/audio-ritual-03.ogg",
+    audioLabel: "Audio Tatami Comun",
     description:
       "Los tatamis nos dan el plus de cercania y potenciamos el erotismo. Enfatizamos el piel a piel y la danza erotica de los cuerpos. Es una experiencia mas jugada a la hora de sensualidad. La caricia consciente se realiza mas ferviente y erotica. Es para quienes buscan recibir un erotismo mas ferviente. La terapia se brinda en 4 etapas: conexion tantrica, una sola respiracion; masaje sensorial con tules; masaje sensual erotico con aceites calientes premium de coco; piel a piel, cuerpo a cuerpo, full desnudes. Terminacion manual ferviente. No hay penetracion.",
   },
@@ -51,6 +57,8 @@ const services = [
     price: "USD 400",
     featured: true,
     meta: ["Experiencia interactiva", "Aceites premium", "Conexion"],
+    audio: "assets/optimized/audio-ritual-04.ogg",
+    audioLabel: "Audio Tatami Interactivo",
     description:
       "El tatami invita a vivir una experiencia mas inmersiva, mas piel a piel, mas cuerpo a cuerpo. Particularmente en el tatami interactivo se potencia la cercania con la terapeuta, dando la libertad de practicar tecnicas tantricas guiadas mas jugadas. Al ser el tatami al ras del suelo nos permite danzar suavemente por el cuerpo sin barreras, disfrutando la caricia consciente como una sola. Podran realizar ciertas poses tantricas, como el abrazo desnudo tantrico, donde ambos cuerpos se envuelven en el verdadero sentir de la respiracion. Ambos se recostaran en el tatami dejando fluir sus cuerpos en la caricia. Tambien se divide en 4 etapas: conexion tantrica en modo interactivo, ya que ambos practicaran esa cercania; masaje consciente con tules sensorial, donde aprenderas a hacerlo armoniosamente; masaje sensual, permitiendose ser una sola pieza y gozar de la danza erotica en el tatami; y un masaje ferviente, full desnudes, con estimulacion con los pechos y terminacion manual. Este masaje invita a re agendar el siguiente nivel.",
   },
@@ -402,6 +410,17 @@ function renderServices() {
         const jacuzziNotice = service.id.includes("jacuzzi")
           ? `<div class="service-notice">Reservas con jacuzzi disponibles a partir del ${jacuzziAvailableFrom}.</div>`
           : "";
+        const audioPlayer = service.audio
+          ? `
+            <div class="service-audio">
+              <div>
+                <span>Escuchar descripcion</span>
+                <strong>${service.audioLabel}</strong>
+              </div>
+              <audio controls preload="none" src="${service.audio}"></audio>
+            </div>
+          `
+          : "";
 
         return `
         <article class="service-card ${service.featured ? "featured" : ""}">
@@ -413,6 +432,7 @@ function renderServices() {
             <span class="currency-pill">${service.duration} min</span>
           </div>
           <p>${service.description}</p>
+          ${audioPlayer}
           ${jacuzziNotice}
           <div class="service-meta">
             ${service.meta.map((item) => `<span>${item}</span>`).join("")}
