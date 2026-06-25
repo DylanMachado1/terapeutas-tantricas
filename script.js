@@ -113,6 +113,13 @@ const galleryItems = [
   },
   {
     type: "image",
+    src: "assets/optimized/ducha-agua-luz.jpeg",
+    title: "Ducha relax",
+    label: "Agua tibia",
+    layout: "tall soft",
+  },
+  {
+    type: "image",
     src: "assets/optimized/bata-blanca-luz.jpeg",
     title: "Ducha anexa",
     label: "Pulcritud",
