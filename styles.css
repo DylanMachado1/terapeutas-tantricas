@@ -661,18 +661,18 @@ p {
 .therapist-card::before {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(118, 19, 38, 0.78)),
-    url("assets/optimized/presencia-chacra.jpg");
+    url("assets/optimized/terapeuta-roja-carousel.jpeg");
   background-size: cover;
-  background-position: center top;
+  background-position: center;
   animation: therapistPrimary 10s ease-in-out infinite;
 }
 
 .therapist-card::after {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(118, 19, 38, 0.8)),
-    url("assets/optimized/terapeuta-roja-carousel.jpeg");
+    url("assets/optimized/presencia-chacra.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   opacity: 0;
   animation: therapistSecondary 10s ease-in-out infinite;
 }
