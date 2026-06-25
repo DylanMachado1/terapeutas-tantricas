@@ -649,17 +649,32 @@ p {
   overflow: hidden;
 }
 
-.therapist-card::before {
+.therapist-card::before,
+.therapist-card::after {
   content: "";
   position: absolute;
   inset: 0;
+  transform: scale(1.04);
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.therapist-card::before {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(118, 19, 38, 0.78)),
     url("assets/optimized/presencia-chacra.jpg");
   background-size: cover;
   background-position: center top;
-  transform: scale(1.04);
-  transition: transform 0.45s ease, filter 0.45s ease;
+  animation: therapistPrimary 10s ease-in-out infinite;
+}
+
+.therapist-card::after {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(118, 19, 38, 0.8)),
+    url("assets/optimized/terapeuta-roja-carousel.jpeg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: therapistSecondary 10s ease-in-out infinite;
 }
 
 .therapist-card.male::before {
@@ -670,9 +685,53 @@ p {
   background-position: center;
 }
 
-.therapist-card:hover::before {
+.therapist-card:hover::before,
+.therapist-card:hover::after {
   filter: saturate(1.1) brightness(1.06);
   transform: scale(1.075);
+}
+
+@keyframes therapistPrimary {
+  0%,
+  42% {
+    opacity: 1;
+  }
+
+  50%,
+  92% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes therapistSecondary {
+  0%,
+  42% {
+    opacity: 0;
+  }
+
+  50%,
+  92% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .therapist-card::before,
+  .therapist-card::after {
+    animation: none;
+  }
+
+  .therapist-card::after {
+    opacity: 0;
+  }
 }
 
 .therapist-card span,
