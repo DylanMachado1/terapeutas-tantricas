@@ -91,7 +91,7 @@ const galleryItems = [
   },
   {
     type: "image",
-    src: "assets/optimized/sala-recibimiento.jpg",
+    src: "assets/optimized/entrada-puerta.jpeg",
     title: "Recibimiento por la masajista",
     label: "Absoluta discrecion",
     layout: "tall warm",
@@ -99,7 +99,7 @@ const galleryItems = [
   {
     type: "video",
     src: "assets/optimized/video-ritual-recibimiento.mp4",
-    poster: "assets/optimized/sala-recibimiento.jpg",
+    poster: "assets/optimized/entrada-puerta.jpeg",
     title: "Bienvenida ritual",
     label: "Cafe de bienvenida",
     layout: "tall warm",
