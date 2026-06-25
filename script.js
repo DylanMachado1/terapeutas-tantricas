@@ -155,14 +155,6 @@ const galleryItems = [
   },
   {
     type: "video",
-    src: "assets/optimized/video-tatami-detalle.mp4",
-    poster: "assets/optimized/sala-tatami-roja.jpeg",
-    title: "Tatami en calma",
-    label: "Ritual",
-    layout: "wide warm",
-  },
-  {
-    type: "video",
     src: "assets/optimized/video-jacuzzi-relax.mp4",
     poster: "assets/optimized/sala-jacuzzi-referencia.jpg",
     title: "Jacuzzi privado",
@@ -207,8 +199,8 @@ const galleryItems = [
     layout: "square",
   },
   {
-    type: "image",
-    src: "assets/optimized/aromaterapia-vela.jpg",
+    type: "video",
+    src: "assets/optimized/video-aromaterapia-sahumo.mp4",
     title: "Aromaterapia",
     label: "Ritual",
     layout: "square soft",
