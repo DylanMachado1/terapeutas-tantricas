@@ -166,7 +166,7 @@ const galleryItems = [
   },
   {
     type: "video",
-    src: "assets/optimized/video-jacuzzi-ambiente.mp4",
+    src: "assets/optimized/video-jacuzzi-relax.mp4",
     poster: "assets/optimized/sala-jacuzzi-referencia.jpg",
     title: "Jacuzzi privado",
     label: "Relax",
