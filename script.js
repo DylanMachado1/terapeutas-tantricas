@@ -256,7 +256,8 @@ const reservedBookingsKey = "clubTantricoReservedBookings";
 const bookingWindowDays = 14;
 const scheduleStartMinutes = 8 * 60;
 const scheduleEndMinutes = 20 * 60;
-const scheduleStepMinutes = 60;
+const scheduleStepMinutes = 75;
+const cleaningBufferMinutes = 15;
 const reservedBookings = [
   // Cuando conectemos el backend, esta lista se reemplaza por reservas reales del servidor.
   // { date: "2026-06-25", time: "10:00", duration: 60 },
@@ -347,7 +348,8 @@ function saveReservedBooking(date, time, service) {
       {
         date,
         time,
-        duration: service.duration,
+        duration: bookingBlockMinutes(service),
+        serviceDuration: service.duration,
         service: service.title,
       },
     ];
@@ -355,6 +357,11 @@ function saveReservedBooking(date, time, service) {
   } catch {
     // Si el navegador bloquea localStorage, la reserva igual sigue por WhatsApp.
   }
+}
+
+function bookingBlockMinutes(service) {
+  const serviceDuration = Number(service.duration || 60);
+  return Math.max(scheduleStepMinutes, serviceDuration + cleaningBufferMinutes);
 }
 
 function isPastSlot(date, time) {
@@ -365,7 +372,7 @@ function isPastSlot(date, time) {
 
 function isReservedSlot(date, time, service) {
   const start = timeToMinutes(time);
-  const end = start + service.duration;
+  const end = start + bookingBlockMinutes(service);
 
   return loadReservedBookings().some((booking) => {
     if (booking.date !== date) return false;
@@ -377,7 +384,11 @@ function isReservedSlot(date, time, service) {
 
 function isSlotAvailable(date, time, service) {
   const start = timeToMinutes(time);
-  return start <= scheduleEndMinutes && !isPastSlot(date, time) && !isReservedSlot(date, time, service);
+  return (
+    start + bookingBlockMinutes(service) <= scheduleEndMinutes &&
+    !isPastSlot(date, time) &&
+    !isReservedSlot(date, time, service)
+  );
 }
 
 function renderServices() {
