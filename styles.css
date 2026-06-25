@@ -655,9 +655,9 @@ p {
   inset: 0;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(118, 19, 38, 0.78)),
-    url("assets/optimized/sala-recibimiento.jpg");
+    url("assets/optimized/presencia-chacra.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   transform: scale(1.04);
   transition: transform 0.45s ease, filter 0.45s ease;
 }

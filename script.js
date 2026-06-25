@@ -240,13 +240,6 @@ const galleryItems = [
     label: "Calma",
     layout: "square soft",
   },
-  {
-    type: "image",
-    src: "assets/optimized/presencia-chacra.jpg",
-    title: "Presencia",
-    label: "Chacra privada",
-    layout: "tall noir",
-  },
 ];
 
 const ageKey = "terapeutasTantricasAgeOk";
