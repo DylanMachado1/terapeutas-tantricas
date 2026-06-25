@@ -86,18 +86,18 @@ const galleryItems = [
     layout: "feature warm",
   },
   {
-    type: "image",
-    src: "assets/optimized/buda-jardin-atardecer.jpeg",
-    title: "Jardin de calma",
-    label: "Chacra privada",
-    layout: "tall warm",
-  },
-  {
     type: "video",
     src: "assets/optimized/video-reserva-conexion-relax.mp4",
     poster: "assets/optimized/chacra-entrada.jpg",
     title: "Reserva un momento de conexion y relax",
     label: "Chacra privada para caballeros",
+    layout: "tall warm",
+  },
+  {
+    type: "image",
+    src: "assets/optimized/buda-jardin-atardecer.jpeg",
+    title: "Chacra privada para caballeros",
+    label: "Naturaleza y discrecion",
     layout: "tall warm",
   },
   {
@@ -111,8 +111,8 @@ const galleryItems = [
     type: "video",
     src: "assets/optimized/video-ritual-recibimiento.mp4",
     poster: "assets/optimized/sala-recibimiento.jpg",
-    title: "Cafe de bienvenida",
-    label: "Cortesia",
+    title: "Bienvenida ritual",
+    label: "Cafe de bienvenida",
     layout: "tall warm",
   },
   {
@@ -166,13 +166,6 @@ const galleryItems = [
     layout: "wide warm",
   },
   {
-    type: "image",
-    src: "assets/optimized/sala-jacuzzi-referencia.jpg",
-    title: "Experiencia jacuzzi",
-    label: "Ambiente privado",
-    layout: "wide warm",
-  },
-  {
     type: "video",
     src: "assets/optimized/video-jacuzzi-relax.mp4",
     poster: "assets/optimized/sala-jacuzzi-referencia.jpg",
@@ -199,7 +192,7 @@ const galleryItems = [
     src: "assets/optimized/video-te-mereces-sentir.mp4",
     poster: "assets/optimized/ritual-esencia.jpg",
     title: "Te mereces sentir",
-    label: "Luz ceremonial",
+    label: "Sentir",
     layout: "square warm",
   },
   {
@@ -207,7 +200,7 @@ const galleryItems = [
     src: "assets/optimized/video-sesiones-unicas.mp4",
     poster: "assets/optimized/luz-tenue.jpg",
     title: "Un lugar disenado para sesiones unicas",
-    label: "Claridad suave",
+    label: "Alto nivel",
     layout: "square warm",
   },
   {
