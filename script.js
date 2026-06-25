@@ -249,9 +249,11 @@ const mercadoPagoDepositUrl = "https://link.mercadopago.com.uy/reservaclub";
 const reservedBookingsKey = "clubTantricoReservedBookings";
 const bookingWindowDays = 14;
 const scheduleStartMinutes = 8 * 60;
-const scheduleEndMinutes = 20 * 60;
+const scheduleLatestStartMinutes = 19 * 60 + 15;
 const scheduleStepMinutes = 75;
 const cleaningBufferMinutes = 15;
+const blockedEarlyWeekDays = [1, 2, 3];
+const blockedEarlyWeekTimes = ["08:00", "09:15"];
 const reservedBookings = [
   // Cuando conectemos el backend, esta lista se reemplaza por reservas reales del servidor.
   // { date: "2026-06-25", time: "10:00", duration: 60 },
@@ -377,10 +379,17 @@ function isReservedSlot(date, time, service) {
   });
 }
 
+function isFixedBlockedSlot(date, time) {
+  if (!date) return false;
+  const day = new Date(`${date}T12:00:00`).getDay();
+  return blockedEarlyWeekDays.includes(day) && blockedEarlyWeekTimes.includes(time);
+}
+
 function isSlotAvailable(date, time, service) {
   const start = timeToMinutes(time);
   return (
-    start + bookingBlockMinutes(service) <= scheduleEndMinutes &&
+    start <= scheduleLatestStartMinutes &&
+    !isFixedBlockedSlot(date, time) &&
     !isPastSlot(date, time) &&
     !isReservedSlot(date, time, service)
   );
@@ -548,7 +557,7 @@ function renderTimePicker() {
     : "Selecciona una fecha";
 
   const slots = [];
-  for (let minutes = scheduleStartMinutes; minutes <= scheduleEndMinutes; minutes += scheduleStepMinutes) {
+  for (let minutes = scheduleStartMinutes; minutes <= scheduleLatestStartMinutes; minutes += scheduleStepMinutes) {
     const time = minutesToTime(minutes);
     const available = selectedDate && isSlotAvailable(selectedDate, time, service);
     const isSelected = selectedTime === time;
