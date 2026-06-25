@@ -3,8 +3,7 @@ const adminSessionKey = "terapeutasTantricasAdminPreview";
 
 const services = {
   "camilla-comun": "Camilla Comun",
-  "camilla-interactiva": "Camilla Interactiva",
-  "camilla-jacuzzi": "Camilla Interactiva con Jacuzzi",
+  "camilla-interactiva": "Masaje Tantrico erotico interactivo",
   "tatami-comun": "Tatami Comun",
   "tatami-jacuzzi": "Tatami Interactivo con Jacuzzi",
   "tatami-interactivo": "Tatami Interactivo",
@@ -35,14 +34,14 @@ const demoBookings = [
   },
   {
     id: "demo-3",
-    serviceId: "camilla-jacuzzi",
+    serviceId: "tatami-interactivo",
     name: "Cliente reservado",
     phone: "+598 97 444 555",
     date: todayIso(2),
     time: "20:00",
     deposit: 1000,
     status: "pendiente",
-    message: "Consulta por camilla interactiva con jacuzzi.",
+    message: "Consulta por tatami interactivo.",
   },
 ];
 

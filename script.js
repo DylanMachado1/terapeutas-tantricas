@@ -14,7 +14,7 @@ const services = [
   },
   {
     id: "camilla-interactiva",
-    title: "Masaje tántrica erótica interactiva en camilla",
+    title: "Masaje Tántrico erótico interactivo",
     label: "Conexion participativa",
     duration: 60,
     price: "$12000",
@@ -24,17 +24,6 @@ const services = [
     audioLabel: "Audio camilla interactiva",
     description:
       "Una experiencia mas cercana al sentir y dar la caricia consciente. Te permitiras interactuar con la terapeuta mediante la verdadera conexion del sentir en tres masajes. Permitiendo descubrir tecnicas con la masajista que elevan el sentir sensorial, sensual y erotico. Aqui aprenderas a dar tantra, conexion y relax. Sentiras placer al dar placer sensorial mediante masajes guiados por el conocimiento y el sentir con la terapeuta. Aprenderas a disfrutar de dar un masaje sensorial con tules ligeros. Se descubriran mediante las pausas de cada masaje. Disfrutaras de encontrar tu sensualidad y erotismo mediante el tantra, la aromaterapia e iluminacion tenue. Terminacion manual. No hay penetracion.",
-  },
-  {
-    id: "camilla-jacuzzi",
-    title: "Masaje tántrica erótica interactiva en camilla, experiencia jacuzzi",
-    label: "Ritual completo",
-    duration: 75,
-    price: "USD 400",
-    featured: true,
-    meta: ["15 min de jacuzzi", "Eucalipto", "Camilla interactiva"],
-    description:
-      "La experiencia comienza con un momento sublime en el jacuzzi, donde el agua tibia envuelve el cuerpo y ayuda a liberar tensiones, relajar la musculatura y aquietar la mente. El calor, el suave movimiento del agua, los aromas y la atmosfera cuidadosamente creada invitan a despertar los sentidos y a entrar en un estado de profundo bienestar y confianza. Es un instante de conexion con el presente, donde el cuerpo se afloja, la respiracion se vuelve mas pausada y cada sensacion se vive con mayor intensidad. La cercania, el entorno calido y la tranquilidad del momento convierten al jacuzzi en el inicio perfecto para una experiencia diferente. Luego recibiras un masaje relajante en camilla, disenado para llevarte a un estado de calma y entrega. A medida que la experiencia avanza, la terapeuta te guiara para que tambien puedas participar del arte de la caricia consciente haciendo un momento memorable, descubriendo el placer de dar y recibir desde la presencia, la sensibilidad y la conexion. A traves del tantra, que es el ser consciente del aqui y ahora, la aromaterapia, la iluminacion tenue y las distintas dinamicas guiadas, viviras una experiencia donde el bienestar, la relajacion y los sentidos se convierten en protagonistas: la verdadera experiencia tantra. Luego el masaje se convierte cada vez mas ferviente, logrando una terminacion manual en la camilla. No hay penetracion.",
   },
   {
     id: "tatami-comun",
