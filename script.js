@@ -53,10 +53,10 @@ const services = [
   },
   {
     id: "tatami-jacuzzi",
-    title: "Masaje tántrico erótico interactivo en Tatami, experiencia jacuzzi",
+    title: "Masaje tántrico erótico interactivo en Tatami, experiencia jacuzzi y ceremonia del te",
     label: "Cita tantrica estrella",
     duration: 90,
-    price: "USD 500",
+    price: "USD 600",
     featured: true,
     meta: ["Ceremonia del te", "Jacuzzi privado", "Chacra privada"],
     description:
