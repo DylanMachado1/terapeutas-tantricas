@@ -1266,64 +1266,6 @@ textarea:disabled {
   padding: 9px 12px;
 }
 
-.legal-section {
-  border-top: 1px solid var(--line);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 241, 243, 0.84)),
-    #fff;
-}
-
-.legal-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.legal-grid details {
-  border: 1px solid rgba(181, 31, 53, 0.16);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 16px 40px rgba(118, 19, 38, 0.08);
-  overflow: hidden;
-}
-
-.legal-grid summary {
-  cursor: pointer;
-  padding: 18px 20px;
-  color: var(--red-deep);
-  font-size: 13px;
-  font-weight: 850;
-  letter-spacing: 0.06em;
-  list-style: none;
-  text-transform: uppercase;
-}
-
-.legal-grid summary::-webkit-details-marker {
-  display: none;
-}
-
-.legal-grid summary::after {
-  content: "+";
-  float: right;
-  color: var(--red);
-  font-size: 18px;
-  line-height: 1;
-}
-
-.legal-grid details[open] summary::after {
-  content: "-";
-}
-
-.legal-grid p {
-  margin: 0;
-  padding: 0 20px 18px;
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.75;
-}
-
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -1339,6 +1281,13 @@ textarea:disabled {
   color: #ffe2e6;
 }
 
+.site-footer small {
+  display: block;
+  margin-top: 12px;
+  color: rgba(255, 226, 230, 0.82);
+  font-size: 12px;
+}
+
 .footer-actions {
   display: flex;
   flex-wrap: wrap;
@@ -1349,6 +1298,117 @@ textarea:disabled {
 
 .footer-actions a {
   color: #fff;
+}
+
+.cookie-banner {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 80;
+  display: none;
+  width: min(440px, calc(100vw - 36px));
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid rgba(181, 31, 53, 0.18);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 22px 70px rgba(77, 21, 31, 0.18);
+}
+
+.cookie-banner.show {
+  display: grid;
+}
+
+.cookie-banner p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.cookie-banner div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.cookie-btn,
+.cookie-banner a {
+  border: 1px solid rgba(181, 31, 53, 0.18);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--red-deep);
+  cursor: pointer;
+  padding: 9px 14px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cookie-btn.primary {
+  border-color: var(--red);
+  background: var(--red);
+  color: #fff;
+}
+
+.legal-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(181, 31, 53, 0.11), transparent 25rem),
+    linear-gradient(180deg, #fff7f6, #fffdfb 42%, #fff4f3);
+}
+
+.legal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 18px clamp(18px, 6vw, 84px);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.legal-document {
+  width: min(900px, calc(100% - 36px));
+  margin: clamp(34px, 7vw, 82px) auto;
+  padding: clamp(24px, 5vw, 54px);
+  border: 1px solid rgba(181, 31, 53, 0.14);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow);
+}
+
+.legal-document h1,
+.legal-document h2 {
+  text-align: left;
+}
+
+.legal-document h1 {
+  margin-bottom: 20px;
+}
+
+.legal-document h2 {
+  margin: 28px 0 10px;
+  color: var(--red-deep);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 850;
+}
+
+.legal-document p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.legal-back {
+  display: inline-flex;
+  margin-top: 18px;
+  color: var(--red);
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .age-gate {
@@ -1641,6 +1701,17 @@ textarea:disabled {
     justify-content: flex-start;
   }
 
+  .cookie-banner {
+    right: 12px;
+    bottom: 12px;
+    width: calc(100vw - 24px);
+  }
+
+  .legal-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .btn {
     width: 100%;
     min-height: 46px;
@@ -1651,20 +1722,6 @@ textarea:disabled {
 
   .reservation-item {
     grid-template-columns: 1fr;
-  }
-
-  .legal-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .legal-grid summary {
-    padding: 16px 18px;
-  }
-
-  .legal-grid p {
-    padding: 0 18px 16px;
-    font-size: 14px;
-    line-height: 1.65;
   }
 
   .gallery-grid {

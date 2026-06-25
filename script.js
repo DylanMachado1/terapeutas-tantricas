@@ -243,6 +243,7 @@ const galleryItems = [
 ];
 
 const ageKey = "terapeutasTantricasAgeOk";
+const cookiePreferenceKey = "clubSenoresCookiePreference";
 const whatsappNumber = "59892067907";
 const mercadoPagoDepositUrl = "https://link.mercadopago.com.uy/reservaclub";
 const reservedBookingsKey = "clubTantricoReservedBookings";
@@ -261,6 +262,7 @@ const els = {
   confirmAge: document.querySelector("#confirmAge"),
   menuToggle: document.querySelector("#menuToggle"),
   mainNav: document.querySelector("#mainNav"),
+  cookieBanner: document.querySelector("#cookieBanner"),
   serviceGrid: document.querySelector("#serviceGrid"),
   galleryGrid: document.querySelector("#galleryGrid"),
   priceGrid: document.querySelector("#priceGrid"),
@@ -676,6 +678,32 @@ function initAgeGate() {
   });
 }
 
+function initCookieBanner() {
+  if (!els.cookieBanner) return;
+
+  let savedPreference = "";
+  try {
+    savedPreference = localStorage.getItem(cookiePreferenceKey) || "";
+  } catch {
+    savedPreference = "";
+  }
+
+  if (!savedPreference) {
+    window.setTimeout(() => els.cookieBanner.classList.add("show"), 900);
+  }
+
+  els.cookieBanner.querySelectorAll("[data-cookie-choice]").forEach((button) => {
+    button.addEventListener("click", () => {
+      try {
+        localStorage.setItem(cookiePreferenceKey, button.dataset.cookieChoice);
+      } catch {
+        // Si el navegador bloquea almacenamiento local, ocultamos el aviso en esta visita.
+      }
+      els.cookieBanner.classList.remove("show");
+    });
+  });
+}
+
 function init() {
   renderServices();
   renderPrices();
@@ -685,6 +713,7 @@ function init() {
   updateSummary();
   updateCalendarLock();
   initAgeGate();
+  initCookieBanner();
 
   els.bookingService.addEventListener("change", () => {
     els.bookingTime.value = "";
