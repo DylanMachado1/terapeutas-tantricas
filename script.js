@@ -95,21 +95,14 @@ const galleryItems = [
   {
     type: "image",
     src: "assets/optimized/sala-recibimiento.jpg",
-    title: "Sala de recibimiento",
-    label: "Cafe de cortesia",
+    title: "Recibimiento por la masajista",
+    label: "Absoluta discrecion",
     layout: "tall warm",
   },
   {
     type: "video",
     src: "assets/optimized/video-ritual-recibimiento.mp4",
     poster: "assets/optimized/sala-recibimiento.jpg",
-    title: "Bienvenida ritual",
-    label: "Cortesia",
-    layout: "tall warm",
-  },
-  {
-    type: "image",
-    src: "assets/optimized/cafe-bienvenida.jpg",
     title: "Cafe de bienvenida",
     label: "Cortesia",
     layout: "tall warm",
