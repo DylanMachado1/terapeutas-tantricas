@@ -252,7 +252,7 @@ const scheduleStartMinutes = 8 * 60;
 const scheduleLatestStartMinutes = 19 * 60 + 15;
 const scheduleStepMinutes = 75;
 const cleaningBufferMinutes = 15;
-const blockedEarlyWeekDays = [1, 2, 3];
+const blockedEarlyWeekDays = [2, 4];
 const blockedEarlyWeekTimes = ["08:00", "09:15"];
 const reservedBookings = [
   // Cuando conectemos el backend, esta lista se reemplaza por reservas reales del servidor.
