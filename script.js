@@ -99,7 +99,7 @@ const galleryItems = [
   {
     type: "video",
     src: "assets/optimized/video-ritual-recibimiento.mp4",
-    poster: "assets/optimized/entrada-puerta.jpeg",
+    poster: "assets/optimized/cafe-bienvenida.jpg",
     title: "Bienvenida ritual",
     label: "Cafe de bienvenida",
     layout: "tall warm",
