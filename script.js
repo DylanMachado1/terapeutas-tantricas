@@ -246,6 +246,8 @@ const ageKey = "terapeutasTantricasAgeOk";
 const cookiePreferenceKey = "clubSenoresCookiePreference";
 const whatsappNumber = "59892067907";
 const mercadoPagoDepositUrl = "https://link.mercadopago.com.uy/reservaclub";
+const locationMapUrl = "https://maps.app.goo.gl/AFiHAR1ZxmRMpgSKA";
+const locationReference = "Portera roja";
 const reservedBookingsKey = "clubTantricoReservedBookings";
 const bookingWindowDays = 14;
 const scheduleStartMinutes = 8 * 60;
@@ -624,6 +626,8 @@ function buildWhatsAppText(service, name, phone, message, date, time) {
     date ? `Día elegido: ${date}` : "",
     time ? `Horario elegido: ${time}` : "",
     "Adjunto el comprobante de pago en este chat.",
+    `Ubicación: ${locationMapUrl}`,
+    `Referencia de entrada: ${locationReference}`,
     name ? `Nombre: ${name}` : "",
     phone ? `WhatsApp: ${phone}` : "",
     message ? `Comentario: ${message}` : "",
