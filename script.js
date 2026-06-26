@@ -1,7 +1,7 @@
 const services = [
   {
     id: "camilla-comun",
-    title: "Masaje tántrica erótica en camilla",
+    title: "Masaje tántrico erótico en camilla",
     label: "Relax profundo",
     duration: 50,
     price: "$5000",
@@ -14,7 +14,7 @@ const services = [
   },
   {
     id: "camilla-interactiva",
-    title: "Masaje Tántrico erótico interactivo",
+    title: "Masaje tántrico erótico interactivo en camilla",
     label: "Conexion participativa",
     duration: 60,
     price: "$12000",
