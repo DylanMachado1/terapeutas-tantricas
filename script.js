@@ -14,7 +14,7 @@ const services = [
   },
   {
     id: "camilla-interactiva",
-    title: "Masaje tántrico erótico interactivo en camilla",
+    title: "Masaje tántrico erótico camilla interactivo",
     label: "Conexion participativa",
     duration: 60,
     price: "$12000",
