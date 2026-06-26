@@ -594,7 +594,7 @@ function updateSummary() {
     Duracion: ${service.duration} min<br>
     Valor: ${service.price}<br>
     Pago elegido: ${paymentChoiceLabel()} · ${amount}<br>
-    Primero paga por Mercado Pago. Luego se habilita el calendario y se envia el comprobante por WhatsApp o Instagram.
+    Primero paga por Mercado Pago. Luego se habilita el calendario y se envia el comprobante por WhatsApp.
   `;
 }
 
@@ -665,7 +665,7 @@ function submitBooking(event) {
   saveReservedBooking(date, time, service);
   updateSchedulePicker();
   window.open(target, "_blank", "noopener,noreferrer");
-  showToast("WhatsApp abierto. Envia ahi el comprobante de pago. Tambien puede enviarse por Instagram.");
+  showToast("WhatsApp abierto. Envia ahi el comprobante de pago.");
 }
 
 function initAgeGate() {
