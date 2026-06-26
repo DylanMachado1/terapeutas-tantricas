@@ -72,7 +72,7 @@ function listen(port, attemptsLeft = 10) {
   });
 
   server.listen(port, () => {
-    console.log(`Terapeutas Tantricas listo en http://localhost:${port}`);
+    console.log(`Club de Señores listo en http://localhost:${port}`);
   });
 }
 

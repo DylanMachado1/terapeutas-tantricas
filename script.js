@@ -209,7 +209,7 @@ const galleryItems = [
     type: "image",
     src: "assets/optimized/manos-sensoriales.jpg",
     title: "Respirar y sentir",
-    label: "Conexion",
+    label: "Conexión",
     layout: "square soft",
   },
   {
@@ -465,7 +465,7 @@ function renderGallery() {
     .map((item, index) => {
       const media =
         item.type === "video"
-          ? `<video src="${item.src}" muted loop playsinline controls poster="${item.poster || ""}"></video>`
+          ? `<video src="${item.src}" muted loop playsinline controls preload="metadata" poster="${item.poster || ""}" aria-label="${item.title}"></video>`
           : `<img src="${item.src}" alt="${item.title}" loading="lazy" decoding="async" />`;
 
       return `
@@ -556,7 +556,7 @@ function renderTimePicker() {
     ? new Intl.DateTimeFormat("es-UY", { weekday: "long", day: "numeric", month: "long" }).format(
         new Date(`${selectedDate}T12:00:00`)
       )
-    : "Selecciona una fecha";
+    : "Seleccioná una fecha";
 
   const slots = [];
   for (let minutes = scheduleStartMinutes; minutes <= scheduleLatestStartMinutes; minutes += scheduleStepMinutes) {

@@ -1,0 +1,23 @@
+{
+  "name": "Club de Señores",
+  "short_name": "Club de Señores",
+  "description": "Experiencias privadas de tantra, relax, jacuzzi y bienestar sensorial.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fff7f6",
+  "theme_color": "#b51f35",
+  "icons": [
+    {
+      "src": "assets/optimized/club-senores-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/optimized/club-senores-apple-touch.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

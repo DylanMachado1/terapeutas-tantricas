@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dylanmachado1.github.io/terapeutas-tantricas/sitemap.xml
