@@ -69,9 +69,9 @@ const jacuzziAvailableFrom = "15/07/2026";
 const galleryItems = [
   {
     type: "image",
-    src: "assets/optimized/lugar-intimo-privado.jpeg",
+    src: "assets/optimized/intimo-privado-buda-vela.jpeg",
     title: "Lugar íntimo y privado",
-    label: "Privacidad y calma",
+    label: "Íntimo privado",
     layout: "feature warm",
   },
   {
