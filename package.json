@@ -2,7 +2,7 @@
   "name": "terapeutas-tantricas",
   "version": "1.0.0",
   "private": true,
-  "description": "Sitio web estático para Club de Señores.",
+  "description": "Sitio web estático para Masajes Sensitivos.",
   "scripts": {
     "dev": "node server.js",
     "start": "node server.js",

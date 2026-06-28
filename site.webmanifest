@@ -1,6 +1,6 @@
 {
-  "name": "Club de Señores",
-  "short_name": "Club de Señores",
+  "name": "Masajes Sensitivos",
+  "short_name": "Masajes Sensitivos",
   "description": "Experiencias privadas de tantra, relax, jacuzzi y bienestar sensorial.",
   "start_url": "./",
   "scope": "./",
@@ -9,13 +9,13 @@
   "theme_color": "#b51f35",
   "icons": [
     {
-      "src": "assets/optimized/club-senores-icon-512.png",
+      "src": "assets/optimized/masajes-sensitivos-icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "assets/optimized/club-senores-apple-touch.png",
+      "src": "assets/optimized/masajes-sensitivos-apple-touch.png",
       "sizes": "180x180",
       "type": "image/png"
     }
