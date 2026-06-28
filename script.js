@@ -58,7 +58,7 @@ const services = [
     duration: 90,
     price: "USD 600",
     featured: true,
-    meta: ["Ceremonia del té", "Jacuzzi privado", "Chacra privada"],
+    meta: ["Ceremonia del té", "Jacuzzi privado", "Entrada privada"],
     description:
       "Más que un masaje tántrico, es una cita tántrica: un momento de disfrute, conexión y relax en un lugar privado, exclusivo y de alto nivel, con discreción desde el primer mensaje. Esta terapia está diseñada para vivir un ritual hermoso antes del masaje: la ceremonia del té, una pausa para disfrutar el silencio, el sentir y la sensorialidad máxima. La experiencia continúa con jacuzzi privado, aromas, una charla armoniosa y una ducha relax. Luego pasás a una sala confortable con tatami, luz tenue y un ambiente cuidadosamente preparado. La conexión tántrica inicia con caricias suaves y el masaje se vive en tres etapas: masaje sensorial con tules para activar la energía y despertar lentamente la excitación; masaje con aceites de coco premium orgánico, relajante al principio y cada vez más sensual; y una etapa final con aceite tibio, tules, soplidos y técnicas tántricas orientadas a una descarga manual intensa. Después se ofrece agua común o saborizada, una ducha para quitar excesos de aceite con jabón de glicerina sin perfumes y una despedida tranquila. Una verdadera experiencia tántrica, una cita de primer nivel. Manual y sin penetración.",
   },
@@ -79,14 +79,14 @@ const galleryItems = [
     src: "assets/optimized/video-reserva-conexion-relax.mp4",
     poster: "assets/optimized/chacra-entrada.jpg",
     title: "Reserva un momento de conexión y relax",
-    label: "Chacra privada para caballeros",
+    label: "Entrada privada",
     layout: "tall warm",
   },
   {
     type: "image",
     src: "assets/optimized/buda-jardin-atardecer.jpeg",
-    title: "Chacra privada para caballeros",
-    label: "Naturaleza y discreción",
+    title: "Entrada privada",
+    label: "Un lugar único e íntimo para tu sesión",
     layout: "tall warm",
   },
   {
@@ -247,7 +247,7 @@ const cookiePreferenceKey = "masajesSensitivosCookiePreference";
 const whatsappNumber = "59892067907";
 const mercadoPagoDepositUrl = "https://link.mercadopago.com.uy/reservaclub";
 const locationMapUrl = "https://maps.app.goo.gl/AFiHAR1ZxmRMpgSKA";
-const locationReference = "Chacra privada portera Roja";
+const locationReference = "Entrada privada, portera roja";
 const reservedBookingsKey = "clubTantricoReservedBookings";
 const bookingWindowDays = 14;
 const scheduleStartMinutes = 8 * 60;
