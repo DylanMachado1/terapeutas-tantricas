@@ -69,9 +69,9 @@ const jacuzziAvailableFrom = "15/07/2026";
 const galleryItems = [
   {
     type: "image",
-    src: "assets/optimized/chacra-entrada.jpg",
-    title: "Chacra Tantra exclusiva",
-    label: "Entrada privada",
+    src: "assets/optimized/lugar-intimo-privado.jpeg",
+    title: "Lugar íntimo y privado",
+    label: "Privacidad y calma",
     layout: "feature warm",
   },
   {

@@ -1,6 +1,7 @@
 Guarda aca las imagenes con estos nombres para que la web las tome automaticamente:
 
 - chacra-entrada.jpg
+- lugar-intimo-privado.jpeg
 - presencia-chacra.jpg
 - sala-recibimiento.jpg
 - cafe-bienvenida.jpg
