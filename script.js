@@ -53,18 +53,18 @@ const services = [
   },
   {
     id: "tatami-jacuzzi",
-    title: "Masaje tántrico erótico interactivo en Tatami, experiencia jacuzzi y ceremonia del té",
+    title: "Cita tántrica con ceremonia del té",
     label: "Cita tántrica estrella",
     duration: 90,
     price: "USD 600",
     featured: true,
-    meta: ["Ceremonia del té", "Jacuzzi privado", "Entrada privada"],
+    meta: ["Ceremonia del té", "Ritual privado", "Entrada privada"],
     description:
-      "Más que un masaje tántrico, es una cita tántrica: un momento de disfrute, conexión y relax en un lugar privado, exclusivo y de alto nivel, con discreción desde el primer mensaje. Esta terapia está diseñada para vivir un ritual hermoso antes del masaje: la ceremonia del té, una pausa para disfrutar el silencio, el sentir y la sensorialidad máxima. La experiencia continúa con jacuzzi privado, aromas, una charla armoniosa y una ducha relax. Luego pasás a una sala confortable con tatami, luz tenue y un ambiente cuidadosamente preparado. La conexión tántrica inicia con caricias suaves y el masaje se vive en tres etapas: masaje sensorial con tules para activar la energía y despertar lentamente la excitación; masaje con aceites de coco premium orgánico, relajante al principio y cada vez más sensual; y una etapa final con aceite tibio, tules, soplidos y técnicas tántricas orientadas a una descarga manual intensa. Después se ofrece agua común o saborizada, una ducha para quitar excesos de aceite con jabón de glicerina sin perfumes y una despedida tranquila. Una verdadera experiencia tántrica, una cita de primer nivel. Manual y sin penetración.",
+      "Más que un masaje tántrico, es una cita tántrica: un momento de disfrute, conexión y relax en un lugar privado, exclusivo y de alto nivel, con discreción desde el primer mensaje. Esta terapia está diseñada para vivir un ritual hermoso antes del masaje: la ceremonia del té, una pausa para disfrutar el silencio, el sentir y la sensorialidad máxima. La experiencia continúa con aromas, una charla armoniosa y una ducha relax. Luego pasás a una sala confortable con tatami, luz tenue y un ambiente cuidadosamente preparado. La conexión tántrica inicia con caricias suaves y el masaje se vive en tres etapas: masaje sensorial con tules para activar la energía y despertar lentamente la excitación; masaje con aceites de coco premium orgánico, relajante al principio y cada vez más sensual; y una etapa final con aceite tibio, tules, soplidos y técnicas tántricas orientadas a una descarga manual intensa. Después se ofrece agua común o saborizada, una ducha para quitar excesos de aceite con jabón de glicerina sin perfumes y una despedida tranquila. Una verdadera experiencia tántrica, una cita de primer nivel. Manual y sin penetración.",
   },
 ];
 
-const jacuzziAvailableFrom = "15/07/2026";
+const ritualAvailableFrom = "15/07/2026";
 
 const galleryItems = [
   {
@@ -157,7 +157,7 @@ const galleryItems = [
     type: "video",
     src: "assets/optimized/video-jacuzzi-relax.mp4",
     poster: "assets/optimized/sala-jacuzzi-referencia.jpg",
-    title: "Jacuzzi privado",
+    title: "Ritual privado",
     label: "Relax",
     layout: "wide warm",
   },
@@ -165,7 +165,7 @@ const galleryItems = [
     type: "image",
     src: "assets/optimized/agua-limon-bienvenida.jpeg",
     title: "Agua saborizada",
-    label: "Después del jacuzzi",
+    label: "Después del ritual",
     layout: "tall soft",
   },
   {
@@ -403,8 +403,8 @@ function renderServices() {
   els.serviceGrid.innerHTML = services
     .map(
       (service) => {
-        const jacuzziNotice = service.id.includes("jacuzzi")
-          ? `<div class="service-notice">Reservas con jacuzzi disponibles a partir del ${jacuzziAvailableFrom}.</div>`
+        const ritualNotice = service.id === "tatami-jacuzzi"
+          ? `<div class="service-notice">Cita tántrica con ceremonia del té disponible a partir del ${ritualAvailableFrom}.</div>`
           : "";
         const audioPlayer = service.audio
           ? `
@@ -429,7 +429,7 @@ function renderServices() {
           </div>
           <p>${service.description}</p>
           ${audioPlayer}
-          ${jacuzziNotice}
+          ${ritualNotice}
           <div class="service-meta">
             ${service.meta.map((item) => `<span>${item}</span>`).join("")}
           </div>
