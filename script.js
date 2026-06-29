@@ -448,6 +448,19 @@ function renderServices() {
   });
 }
 
+function bindServiceButtons() {
+  document.querySelectorAll("[data-service]").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (!els.bookingService) return;
+
+      els.bookingService.value = button.dataset.service;
+      els.bookingTime.value = "";
+      updateSummary();
+      updateSchedulePicker();
+    });
+  });
+}
+
 function renderPrices() {
   els.priceGrid.innerHTML = services
     .map(
@@ -724,6 +737,7 @@ function init() {
   renderPrices();
   renderGallery();
   fillServiceSelect();
+  bindServiceButtons();
   updatePaymentLink();
   updateSummary();
   updateCalendarLock();
