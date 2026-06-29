@@ -23,7 +23,7 @@ const services = [
     audio: "assets/optimized/audio-ritual-02.ogg",
     audioLabel: "Audio camilla interactiva",
     description:
-      "Una experiencia más cercana al sentir y dar la caricia consciente. Te permitirás interactuar con la terapeuta mediante la verdadera conexión del sentir en tres masajes. Permitiendo descubrir técnicas con la masajista que elevan el sentir sensorial, sensual y erótico. Aquí aprenderás a dar tantra, conexión y relax. Sentirás placer al dar placer sensorial mediante masajes guiados por el conocimiento y el sentir con la terapeuta. Aprenderás a disfrutar de dar un masaje sensorial con tules ligeros. Se descubrirán mediante las pausas de cada masaje. Disfrutarás de encontrar tu sensualidad y erotismo mediante el tantra, la aromaterapia e iluminación tenue. Terminación manual. No hay penetración.",
+      "Una experiencia más cercana al sentir y a la caricia consciente. Tendrás la posibilidad de interactuar en las 4 etapas del masaje, acompañando la conexión tántrica, el masaje sensorial con tules, el masaje relajante con aceite tibio de coco y la etapa sensual erótica final. La terapeuta guía cada momento con calma, presencia y profesionalismo. Terminación manual. Sin penetración.",
   },
   {
     id: "tatami-comun",
@@ -36,7 +36,7 @@ const services = [
     audio: "assets/optimized/audio-ritual-03.ogg",
     audioLabel: "Audio Tatami",
     description:
-      "Los tatamis nos dan el plus de cercanía y potenciamos el erotismo. Enfatizamos el piel a piel y la danza erótica de los cuerpos. Es una experiencia más jugada a la hora de la sensualidad. La caricia consciente se realiza de forma más ferviente y erótica. Es para quienes buscan recibir un erotismo más ferviente. La terapia se brinda en 4 etapas: conexión tántrica, una sola respiración; masaje sensorial con tules; masaje sensual erótico con aceites calientes premium de coco; piel a piel, cuerpo a cuerpo, full desnudes. Terminación manual ferviente. No hay penetración.",
+      "En el tatami común se enfatiza la sensualidad al 100% y el erotismo, con una propuesta más cercana, piel a piel y full desnudes. También se divide en 4 etapas: conexión tántrica; masaje con tules sensorial para circular la energía sexual; masaje relajante que poco a poco se convierte en sensual y erótico; y pose tántrica full desnudes con estimulación en zonas íntimas, seguida de masaje tantra manual. Sin penetración.",
   },
   {
     id: "tatami-interactivo",
@@ -49,7 +49,7 @@ const services = [
     audio: "assets/optimized/audio-ritual-04.ogg",
     audioLabel: "Audio Tatami interactivo",
     description:
-      "El tatami invita a vivir una experiencia más inmersiva, más piel a piel, más cuerpo a cuerpo. Particularmente en el tatami interactivo se potencia la cercanía con la terapeuta, dando la libertad de practicar técnicas tántricas guiadas más jugadas. Al ser el tatami al ras del suelo nos permite danzar suavemente por el cuerpo sin barreras, disfrutando la caricia consciente como una sola. Podrán realizar ciertas poses tántricas, como el abrazo desnudo tántrico, donde ambos cuerpos se envuelven en el verdadero sentir de la respiración. Ambos se recostarán en el tatami dejando fluir sus cuerpos en la caricia. También se divide en 4 etapas: conexión tántrica en modo interactivo, ya que ambos practicarán esa cercanía; masaje consciente con tules sensorial, donde aprenderás a hacerlo armoniosamente; masaje sensual, permitiéndose ser una sola pieza y gozar de la danza erótica en el tatami; y un masaje ferviente, full desnudes, con estimulación con los pechos y terminación manual. Este masaje invita a reagendar el siguiente nivel.",
+      "Aquí se marca la diferencia con la camilla interactiva: no solo interactuás, también participás de forma guiada aprendiendo a hacer tantra. La experiencia te invita a tomar un rol más activo, acompañando a la masajista mediante masajes sensoriales, caricia consciente y erotismo guiado. Se potencia el placer de dar, la conexión piel a piel y la intensidad propia del tatami. Terminación manual. Sin penetración.",
   },
   {
     id: "tatami-jacuzzi",
