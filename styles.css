@@ -525,6 +525,78 @@ p {
   font-weight: 800;
 }
 
+.service-header {
+  grid-template-columns: auto 1fr;
+}
+
+.service-page-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+}
+
+.service-page-nav a {
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.service-page-nav a:hover,
+.service-page-nav a:focus {
+  color: var(--red);
+}
+
+.service-page-main {
+  padding-top: 84px;
+  background:
+    linear-gradient(180deg, rgba(255, 247, 246, 0.92), rgba(255, 255, 255, 0.98) 360px),
+    #fff;
+}
+
+.service-page-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 1.05fr);
+  gap: clamp(28px, 6vw, 84px);
+  align-items: center;
+  min-height: 520px;
+}
+
+.service-page-hero h1 {
+  max-width: 680px;
+}
+
+.service-page-hero p {
+  max-width: 620px;
+}
+
+.service-page-hero img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  display: block;
+  border-radius: var(--radius);
+  object-fit: cover;
+  box-shadow: 0 28px 80px rgba(104, 34, 44, 0.18);
+}
+
+.service-page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.service-page-section {
+  border-top: 1px solid var(--line);
+  background: #fff;
+}
+
+.service-page-section .service-detail-card {
+  margin-bottom: 24px;
+}
+
 .services {
   background:
     linear-gradient(180deg, rgba(255, 241, 243, 0.72), rgba(255, 255, 255, 0.86)),
@@ -1679,6 +1751,16 @@ textarea:disabled {
     padding: 14px 18px;
   }
 
+  .service-header {
+    grid-template-columns: 1fr;
+  }
+
+  .service-page-nav {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
   .menu-toggle {
     display: inline-grid;
   }
@@ -1737,6 +1819,11 @@ textarea:disabled {
     aspect-ratio: 16 / 10;
   }
 
+  .service-page-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
   .therapist-list {
     grid-template-columns: 1fr;
   }
@@ -1768,6 +1855,18 @@ textarea:disabled {
 }
 
 @media (max-width: 620px) {
+  .service-page-main {
+    padding-top: 92px;
+  }
+
+  .service-page-hero {
+    padding-top: 44px;
+  }
+
+  .service-page-actions {
+    flex-direction: column;
+  }
+
   .brand {
     min-width: 0;
   }

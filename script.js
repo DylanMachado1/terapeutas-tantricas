@@ -526,6 +526,15 @@ function fillServiceSelect() {
     .join("");
 }
 
+function preselectServiceFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const serviceId = params.get("service");
+
+  if (serviceId && services.some((service) => service.id === serviceId)) {
+    els.bookingService.value = serviceId;
+  }
+}
+
 function renderDatePicker() {
   const isPaid = els.depositCheck.checked;
   const today = new Date();
@@ -737,6 +746,7 @@ function init() {
   renderPrices();
   renderGallery();
   fillServiceSelect();
+  preselectServiceFromUrl();
   bindServiceButtons();
   updatePaymentLink();
   updateSummary();
