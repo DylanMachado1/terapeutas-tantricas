@@ -398,6 +398,8 @@ function isSlotAvailable(date, time, service) {
 }
 
 function renderServices() {
+  if (!els.serviceGrid) return;
+
   els.serviceGrid.innerHTML = services
     .map(
       (service) => {
