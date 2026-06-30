@@ -242,7 +242,6 @@ const galleryItems = [
   },
 ];
 
-const ageKey = "terapeutasTantricasAgeOk";
 const cookiePreferenceKey = "masajesSensitivosCookiePreference";
 const whatsappNumber = "59892067907";
 const mercadoPagoDepositUrl = "https://link.mercadopago.com.uy/reservaclub";
@@ -262,8 +261,6 @@ const reservedBookings = [
 ];
 
 const els = {
-  ageGate: document.querySelector("#ageGate"),
-  confirmAge: document.querySelector("#confirmAge"),
   menuToggle: document.querySelector("#menuToggle"),
   mainNav: document.querySelector("#mainNav"),
   cookieBanner: document.querySelector("#cookieBanner"),
@@ -696,25 +693,6 @@ function submitBooking(event) {
   showToast("WhatsApp abierto. Enviá ahí el comprobante de pago.");
 }
 
-function initAgeGate() {
-  if (new URLSearchParams(window.location.search).has("resetAge")) {
-    localStorage.removeItem(ageKey);
-    sessionStorage.removeItem(ageKey);
-  }
-
-  if (sessionStorage.getItem(ageKey) === "true") {
-    document.body.classList.remove("locked");
-    els.ageGate.classList.remove("visible");
-    return;
-  }
-
-  els.confirmAge.addEventListener("click", () => {
-    sessionStorage.setItem(ageKey, "true");
-    document.body.classList.remove("locked");
-    els.ageGate.classList.remove("visible");
-  });
-}
-
 function initCookieBanner() {
   if (!els.cookieBanner) return;
 
@@ -751,7 +729,6 @@ function init() {
   updatePaymentLink();
   updateSummary();
   updateCalendarLock();
-  initAgeGate();
   initCookieBanner();
 
   els.bookingService.addEventListener("change", () => {
