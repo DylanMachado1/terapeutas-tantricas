@@ -1,7 +1,7 @@
 const services = [
   {
     id: "camilla-comun",
-    title: "Masaje tántrico erótico en camilla",
+    title: "Masaje en Camilla erótica full desnudes.",
     label: "Relax profundo",
     duration: 50,
     price: "$5000",
@@ -10,11 +10,11 @@ const services = [
     audio: "assets/optimized/audio-ritual-01.ogg",
     audioLabel: "Audio camilla",
     description:
-      "Camilla: Una experiencia profesional en camilla para relajar el cuerpo, oxigenar los musculos y bajar el estres acumulado. Aquí enfatizamos un verdadero masaje relajante. Comenzamos con un  masaje sensorial que se realiza con tules suaves ,  luego un masaje relajante profundo  con aceites de coco que poco a poco se convierte en erótico y sensual . Dando una terminación erótica manual. Sin penetración.",
+      "Es un masaje en camilla Relajante ,sensorial y erótico. se divide en 4 etapas. Conexión tántrica, masajes sensorial con tules un masaje relajante con aceite de coco que poco a poco se convierte en Erótico y sensual . Se hace un masaje en las zonas íntimas que logras acabar en una orgasmo fervientemente . Estimulación manual . No hay penetración",
   },
   {
     id: "camilla-interactiva",
-    title: "Masaje tántrico erótico camilla interactivo",
+    title: "Masaje en camilla erótico full desnudes interactivo.",
     label: "Conexión participativa",
     duration: 60,
     price: "$12000",
@@ -23,11 +23,11 @@ const services = [
     audio: "assets/optimized/audio-ritual-02.ogg",
     audioLabel: "Audio camilla interactiva",
     description:
-      "Camilla interactiva : Tendrás la posibilidad de interactuar en las 4 etapas mediante la caricia consciente.",
+      "Aquí tendrás la oportunidad de interactuar con la terapeuta sensual y eróticamente . Estimulación manual No hay penetración",
   },
   {
     id: "tatami-comun",
-    title: "Masaje tántrico erótico en Tatami",
+    title: "Masaje Tatami común full desnudes",
     label: "Sensualidad intensa",
     duration: 50,
     price: "$8000",
@@ -36,11 +36,11 @@ const services = [
     audio: "assets/optimized/audio-ritual-03.ogg",
     audioLabel: "Audio Tatami",
     description:
-      "Tatami común: Full desnudes aquí se enfatiza la sensualidad al 100 y el erotismo También se divide en 4 etapas Conexión tántrica Masaje con tules sensorial circula la energía sexual. Masaje relajante que se convierte en sensual y erótico poco a poco Pose tántrica full desnudes que con los pechos se hace la estimulación en zonas íntimas Masaje Tantra manual Sin penetración",
+      "El masaje es similar a la camilla en sus etapas pero se realiza en un Tatami donde se puede enfatizar más el erotismo y la sensualidad. Es un masaje más piel a piel, cuerpo a cuerpo . En este masaje se hacen diferentes poses tántricas . Una de ellas es que al final se estimula tus zonas íntimas con los pechos . Haciendo más jugado este masaje : más ferviente y erótico . Terminación manual sin penetración",
   },
   {
     id: "tatami-interactivo",
-    title: "Masaje tántrico erótico interactivo en Tatami",
+    title: "Masaje en Tatami full desnudes interactivo.",
     label: "Tantra a flor de piel",
     duration: 75,
     price: "USD 400",
@@ -49,7 +49,7 @@ const services = [
     audio: "assets/optimized/audio-ritual-04.ogg",
     audioLabel: "Audio Tatami interactivo",
     description:
-      "Tatami interactivo Aquí se ve la diferencia con la camilla interactiva en que aprendes a hacer Tantra. No solo interactuas sino que participas guiada mente como terapeuta dándole placer a la masajista mediantes masajes sensoriales y disfrutas de dar tu erotismo.",
+      "Aquí más que interactuar aprenderás a hacer Tantra con la masajista . Serás guiado en una experiencia sensorial erótica y sensual. Donde tú serás partícipe de dar placer mediante la caricia consciente y el Tantra. Es una terapia que se recibe y da relax placer y erotismo. Terminación manual No hay penetración",
   },
   {
     id: "tatami-jacuzzi",
