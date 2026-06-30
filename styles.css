@@ -572,6 +572,19 @@ p {
   max-width: 620px;
 }
 
+.service-raw-copy {
+  max-width: 680px;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.5vw, 1.12rem);
+  line-height: 1.7;
+}
+
+.service-raw-copy p {
+  max-width: none;
+  margin: 0 0 10px;
+}
+
 .service-page-hero img {
   width: 100%;
   aspect-ratio: 4 / 5;

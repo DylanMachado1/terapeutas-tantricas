@@ -10,7 +10,7 @@ const services = [
     audio: "assets/optimized/audio-ritual-01.ogg",
     audioLabel: "Audio camilla",
     description:
-      "Una experiencia profesional en camilla para relajar el cuerpo, oxigenar los músculos y bajar el estrés acumulado. Aquí enfatizamos un verdadero masaje relajante. Comenzamos con un masaje sensorial que se realiza con tules suaves, luego un masaje relajante profundo con aceites de coco que poco a poco se convierte en erótico y sensual. Dando una terminación erótica manual. Sin penetración.",
+      "Camilla: Una experiencia profesional en camilla para relajar el cuerpo, oxigenar los musculos y bajar el estres acumulado. Aquí enfatizamos un verdadero masaje relajante. Comenzamos con un  masaje sensorial que se realiza con tules suaves ,  luego un masaje relajante profundo  con aceites de coco que poco a poco se convierte en erótico y sensual . Dando una terminación erótica manual. Sin penetración.",
   },
   {
     id: "camilla-interactiva",
@@ -23,7 +23,7 @@ const services = [
     audio: "assets/optimized/audio-ritual-02.ogg",
     audioLabel: "Audio camilla interactiva",
     description:
-      "Una experiencia más cercana al sentir y a la caricia consciente. Tendrás la posibilidad de interactuar en las 4 etapas del masaje, acompañando la conexión tántrica, el masaje sensorial con tules, el masaje relajante con aceite tibio de coco y la etapa sensual erótica final. La terapeuta guía cada momento con calma, presencia y profesionalismo. Terminación manual. Sin penetración.",
+      "Camilla interactiva : Tendrás la posibilidad de interactuar en las 4 etapas mediante la caricia consciente.",
   },
   {
     id: "tatami-comun",
@@ -36,7 +36,7 @@ const services = [
     audio: "assets/optimized/audio-ritual-03.ogg",
     audioLabel: "Audio Tatami",
     description:
-      "En el tatami común se enfatiza la sensualidad al 100% y el erotismo, con una propuesta más cercana, piel a piel y full desnudes. También se divide en 4 etapas: conexión tántrica; masaje con tules sensorial para circular la energía sexual; masaje relajante que poco a poco se convierte en sensual y erótico; y pose tántrica full desnudes con estimulación en zonas íntimas, seguida de masaje tantra manual. Sin penetración.",
+      "Tatami común: Full desnudes aquí se enfatiza la sensualidad al 100 y el erotismo También se divide en 4 etapas Conexión tántrica Masaje con tules sensorial circula la energía sexual. Masaje relajante que se convierte en sensual y erótico poco a poco Pose tántrica full desnudes que con los pechos se hace la estimulación en zonas íntimas Masaje Tantra manual Sin penetración",
   },
   {
     id: "tatami-interactivo",
@@ -49,7 +49,7 @@ const services = [
     audio: "assets/optimized/audio-ritual-04.ogg",
     audioLabel: "Audio Tatami interactivo",
     description:
-      "Aquí se marca la diferencia con la camilla interactiva: no solo interactuás, también participás de forma guiada aprendiendo a hacer tantra. La experiencia te invita a tomar un rol más activo, acompañando a la masajista mediante masajes sensoriales, caricia consciente y erotismo guiado. Se potencia el placer de dar, la conexión piel a piel y la intensidad propia del tatami. Terminación manual. Sin penetración.",
+      "Tatami interactivo Aquí se ve la diferencia con la camilla interactiva en que aprendes a hacer Tantra. No solo interactuas sino que participas guiada mente como terapeuta dándole placer a la masajista mediantes masajes sensoriales y disfrutas de dar tu erotismo.",
   },
   {
     id: "tatami-jacuzzi",
