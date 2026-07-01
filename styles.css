@@ -424,24 +424,14 @@ p {
   display: block;
 }
 
-.service-entry-card span,
 .service-entry-card h3,
 .service-entry-card p {
   margin-right: 22px;
   margin-left: 22px;
 }
 
-.service-entry-card span {
-  margin-top: 22px;
-  color: var(--red);
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
 .service-entry-card h3 {
-  margin-top: 8px;
+  margin-top: 22px;
   color: #190e12;
   font-size: 24px;
   line-height: 1.12;
@@ -1929,7 +1919,6 @@ textarea:disabled {
     margin-bottom: 28px;
   }
 
-  .service-entry-card span,
   .service-entry-card h3,
   .service-entry-card p {
     margin-right: 18px;

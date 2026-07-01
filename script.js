@@ -2,7 +2,6 @@ const services = [
   {
     id: "camilla-comun",
     title: "Masaje en Camilla erótica full desnudes.",
-    label: "Relax profundo",
     duration: 50,
     price: "$5000",
     featured: false,
@@ -15,7 +14,6 @@ const services = [
   {
     id: "camilla-interactiva",
     title: "Masaje en camilla erótico full desnudes interactivo.",
-    label: "Conexión participativa",
     duration: 60,
     price: "$12000",
     featured: true,
@@ -28,7 +26,6 @@ const services = [
   {
     id: "tatami-comun",
     title: "Masaje Tatami común full desnudes",
-    label: "Sensualidad intensa",
     duration: 50,
     price: "$8000",
     featured: false,
@@ -41,7 +38,6 @@ const services = [
   {
     id: "tatami-interactivo",
     title: "Masaje en Tatami full desnudes interactivo.",
-    label: "Tantra a flor de piel",
     duration: 75,
     price: "USD 400",
     featured: true,
@@ -419,7 +415,6 @@ function renderServices() {
         <article class="service-card ${service.featured ? "featured" : ""}">
           <div class="service-top">
             <div>
-              <span>${service.label}</span>
               <h3>${service.title}</h3>
             </div>
             <span class="currency-pill">${service.duration} min</span>
