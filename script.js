@@ -1,7 +1,8 @@
 const services = [
   {
     id: "camilla-comun",
-    title: "Masaje en Camilla erótica full desnudes.",
+    title: "Masaje tántrico erótico en camilla",
+    label: "Relax profundo",
     duration: 50,
     price: "$5000",
     featured: false,
@@ -9,11 +10,12 @@ const services = [
     audio: "assets/optimized/audio-ritual-01.ogg",
     audioLabel: "Audio camilla",
     description:
-      "Es un masaje en camilla Relajante ,sensorial y erótico. se divide en 4 etapas. Conexión tántrica, masajes sensorial con tules un masaje relajante con aceite de coco que poco a poco se convierte en Erótico y sensual . Se hace un masaje en las zonas íntimas que logras acabar en una orgasmo fervientemente . Estimulación manual . No hay penetración",
+      "Una experiencia profesional en camilla para relajar el cuerpo, oxigenar los músculos y bajar el estrés acumulado. Aquí enfatizamos un verdadero masaje relajante. Comenzamos con un masaje sensorial que se realiza con tules suaves, luego un masaje relajante profundo con aceites de coco que poco a poco se convierte en erótico y sensual. Dando una terminación erótica manual. Sin penetración.",
   },
   {
     id: "camilla-interactiva",
-    title: "Masaje en camilla erótico full desnudes interactivo.",
+    title: "Masaje tántrico erótico camilla interactivo",
+    label: "Conexión participativa",
     duration: 60,
     price: "$12000",
     featured: true,
@@ -21,11 +23,12 @@ const services = [
     audio: "assets/optimized/audio-ritual-02.ogg",
     audioLabel: "Audio camilla interactiva",
     description:
-      "Aquí tendrás la oportunidad de interactuar con la terapeuta sensual y eróticamente . Estimulación manual No hay penetración",
+      "Una experiencia más cercana al sentir y dar la caricia consciente. Te permitirás interactuar con la terapeuta mediante la verdadera conexión del sentir en tres masajes. Permitiendo descubrir técnicas con la masajista que elevan el sentir sensorial, sensual y erótico. Aquí aprenderás a dar tantra, conexión y relax. Sentirás placer al dar placer sensorial mediante masajes guiados por el conocimiento y el sentir con la terapeuta. Aprenderás a disfrutar de dar un masaje sensorial con tules ligeros. Se descubrirán mediante las pausas de cada masaje. Disfrutarás de encontrar tu sensualidad y erotismo mediante el tantra, la aromaterapia e iluminación tenue. Terminación manual. No hay penetración.",
   },
   {
     id: "tatami-comun",
-    title: "Masaje Tatami común full desnudes",
+    title: "Masaje tántrico erótico en Tatami",
+    label: "Sensualidad intensa",
     duration: 50,
     price: "$8000",
     featured: false,
@@ -33,11 +36,12 @@ const services = [
     audio: "assets/optimized/audio-ritual-03.ogg",
     audioLabel: "Audio Tatami",
     description:
-      "El masaje es similar a la camilla en sus etapas pero se realiza en un Tatami donde se puede enfatizar más el erotismo y la sensualidad. Es un masaje más piel a piel, cuerpo a cuerpo . En este masaje se hacen diferentes poses tántricas . Una de ellas es que al final se estimula tus zonas íntimas con los pechos . Haciendo más jugado este masaje : más ferviente y erótico . Terminación manual sin penetración",
+      "Los tatamis nos dan el plus de cercanía y potenciamos el erotismo. Enfatizamos el piel a piel y la danza erótica de los cuerpos. Es una experiencia más jugada a la hora de la sensualidad. La caricia consciente se realiza de forma más ferviente y erótica. Es para quienes buscan recibir un erotismo más ferviente. La terapia se brinda en 4 etapas: conexión tántrica, una sola respiración; masaje sensorial con tules; masaje sensual erótico con aceites calientes premium de coco; piel a piel, cuerpo a cuerpo, full desnudes. Terminación manual ferviente. No hay penetración.",
   },
   {
     id: "tatami-interactivo",
-    title: "Masaje en Tatami full desnudes interactivo.",
+    title: "Masaje tántrico erótico interactivo en Tatami",
+    label: "Tantra a flor de piel",
     duration: 75,
     price: "USD 400",
     featured: true,
@@ -45,29 +49,29 @@ const services = [
     audio: "assets/optimized/audio-ritual-04.ogg",
     audioLabel: "Audio Tatami interactivo",
     description:
-      "Aquí más que interactuar aprenderás a hacer Tantra con la masajista . Serás guiado en una experiencia sensorial erótica y sensual. Donde tú serás partícipe de dar placer mediante la caricia consciente y el Tantra. Es una terapia que se recibe y da relax placer y erotismo. Terminación manual No hay penetración",
+      "El tatami invita a vivir una experiencia más inmersiva, más piel a piel, más cuerpo a cuerpo. Particularmente en el tatami interactivo se potencia la cercanía con la terapeuta, dando la libertad de practicar técnicas tántricas guiadas más jugadas. Al ser el tatami al ras del suelo nos permite danzar suavemente por el cuerpo sin barreras, disfrutando la caricia consciente como una sola. Podrán realizar ciertas poses tántricas, como el abrazo desnudo tántrico, donde ambos cuerpos se envuelven en el verdadero sentir de la respiración. Ambos se recostarán en el tatami dejando fluir sus cuerpos en la caricia. También se divide en 4 etapas: conexión tántrica en modo interactivo, ya que ambos practicarán esa cercanía; masaje consciente con tules sensorial, donde aprenderás a hacerlo armoniosamente; masaje sensual, permitiéndose ser una sola pieza y gozar de la danza erótica en el tatami; y un masaje ferviente, full desnudes, con estimulación con los pechos y terminación manual. Este masaje invita a reagendar el siguiente nivel.",
   },
   {
     id: "tatami-jacuzzi",
-    title: "Cita tántrica con ceremonia del té",
+    title: "Masaje tántrico erótico interactivo en Tatami, experiencia jacuzzi y ceremonia del té",
     label: "Cita tántrica estrella",
     duration: 90,
     price: "USD 600",
     featured: true,
-    meta: ["Ceremonia del té", "Ritual privado", "Entrada privada"],
+    meta: ["Ceremonia del té", "Jacuzzi privado", "Chacra privada"],
     description:
-      "Más que un masaje tántrico, es una cita tántrica: un momento de disfrute, conexión y relax en un lugar privado, exclusivo y de alto nivel, con discreción desde el primer mensaje. Esta terapia está diseñada para vivir un ritual hermoso antes del masaje: la ceremonia del té, una pausa para disfrutar el silencio, el sentir y la sensorialidad máxima. La experiencia continúa con aromas, una charla armoniosa y una ducha relax. Luego pasás a una sala confortable con tatami, luz tenue y un ambiente cuidadosamente preparado. La conexión tántrica inicia con caricias suaves y el masaje se vive en tres etapas: masaje sensorial con tules para activar la energía y despertar lentamente la excitación; masaje con aceites de coco premium orgánico, relajante al principio y cada vez más sensual; y una etapa final con aceite tibio, tules, soplidos y técnicas tántricas orientadas a una descarga manual intensa. Después se ofrece agua común o saborizada, una ducha para quitar excesos de aceite con jabón de glicerina sin perfumes y una despedida tranquila. Una verdadera experiencia tántrica, una cita de primer nivel. Manual y sin penetración.",
+      "Más que un masaje tántrico, es una cita tántrica: un momento de disfrute, conexión y relax en un lugar privado, exclusivo y de alto nivel, con discreción desde el primer mensaje. Esta terapia está diseñada para vivir un ritual hermoso antes del masaje: la ceremonia del té, una pausa para disfrutar el silencio, el sentir y la sensorialidad máxima. La experiencia continúa con jacuzzi privado, aromas, una charla armoniosa y una ducha relax. Luego pasás a una sala confortable con tatami, luz tenue y un ambiente cuidadosamente preparado. La conexión tántrica inicia con caricias suaves y el masaje se vive en tres etapas: masaje sensorial con tules para activar la energía y despertar lentamente la excitación; masaje con aceites de coco premium orgánico, relajante al principio y cada vez más sensual; y una etapa final con aceite tibio, tules, soplidos y técnicas tántricas orientadas a una descarga manual intensa. Después se ofrece agua común o saborizada, una ducha para quitar excesos de aceite con jabón de glicerina sin perfumes y una despedida tranquila. Una verdadera experiencia tántrica, una cita de primer nivel. Manual y sin penetración.",
   },
 ];
 
-const ritualAvailableFrom = "15/07/2026";
+const jacuzziAvailableFrom = "15/07/2026";
 
 const galleryItems = [
   {
     type: "image",
-    src: "assets/optimized/intimo-privado-buda-vela.jpeg",
-    title: "Lugar íntimo y privado",
-    label: "Íntimo privado",
+    src: "assets/optimized/chacra-entrada.jpg",
+    title: "Chacra Tantra exclusiva",
+    label: "Entrada privada",
     layout: "feature warm",
   },
   {
@@ -75,14 +79,14 @@ const galleryItems = [
     src: "assets/optimized/video-reserva-conexion-relax.mp4",
     poster: "assets/optimized/chacra-entrada.jpg",
     title: "Reserva un momento de conexión y relax",
-    label: "Entrada privada",
+    label: "Chacra privada para caballeros",
     layout: "tall warm",
   },
   {
     type: "image",
     src: "assets/optimized/buda-jardin-atardecer.jpeg",
-    title: "Entrada privada",
-    label: "Un lugar único e íntimo para tu sesión",
+    title: "Chacra privada para caballeros",
+    label: "Naturaleza y discreción",
     layout: "tall warm",
   },
   {
@@ -153,7 +157,7 @@ const galleryItems = [
     type: "video",
     src: "assets/optimized/video-jacuzzi-relax.mp4",
     poster: "assets/optimized/sala-jacuzzi-referencia.jpg",
-    title: "Ritual privado",
+    title: "Jacuzzi privado",
     label: "Relax",
     layout: "wide warm",
   },
@@ -161,7 +165,7 @@ const galleryItems = [
     type: "image",
     src: "assets/optimized/agua-limon-bienvenida.jpeg",
     title: "Agua saborizada",
-    label: "Después del ritual",
+    label: "Después del jacuzzi",
     layout: "tall soft",
   },
   {
@@ -238,11 +242,12 @@ const galleryItems = [
   },
 ];
 
+const ageKey = "terapeutasTantricasAgeOk";
 const cookiePreferenceKey = "masajesSensitivosCookiePreference";
 const whatsappNumber = "59892067907";
 const mercadoPagoDepositUrl = "https://link.mercadopago.com.uy/reservaclub";
 const locationMapUrl = "https://maps.app.goo.gl/AFiHAR1ZxmRMpgSKA";
-const locationReference = "Entrada privada, portera roja";
+const locationReference = "Chacra privada portera Roja";
 const reservedBookingsKey = "clubTantricoReservedBookings";
 const bookingWindowDays = 14;
 const scheduleStartMinutes = 8 * 60;
@@ -257,6 +262,8 @@ const reservedBookings = [
 ];
 
 const els = {
+  ageGate: document.querySelector("#ageGate"),
+  confirmAge: document.querySelector("#confirmAge"),
   menuToggle: document.querySelector("#menuToggle"),
   mainNav: document.querySelector("#mainNav"),
   cookieBanner: document.querySelector("#cookieBanner"),
@@ -391,13 +398,11 @@ function isSlotAvailable(date, time, service) {
 }
 
 function renderServices() {
-  if (!els.serviceGrid) return;
-
   els.serviceGrid.innerHTML = services
     .map(
       (service) => {
-        const ritualNotice = service.id === "tatami-jacuzzi"
-          ? `<div class="service-notice">Cita tántrica con ceremonia del té disponible a partir del ${ritualAvailableFrom}.</div>`
+        const jacuzziNotice = service.id.includes("jacuzzi")
+          ? `<div class="service-notice">Reservas con jacuzzi disponibles a partir del ${jacuzziAvailableFrom}.</div>`
           : "";
         const audioPlayer = service.audio
           ? `
@@ -415,13 +420,14 @@ function renderServices() {
         <article class="service-card ${service.featured ? "featured" : ""}">
           <div class="service-top">
             <div>
+              <span>${service.label}</span>
               <h3>${service.title}</h3>
             </div>
             <span class="currency-pill">${service.duration} min</span>
           </div>
           <p>${service.description}</p>
           ${audioPlayer}
-          ${ritualNotice}
+          ${jacuzziNotice}
           <div class="service-meta">
             ${service.meta.map((item) => `<span>${item}</span>`).join("")}
           </div>
@@ -436,19 +442,6 @@ function renderServices() {
     button.addEventListener("click", () => {
       els.bookingService.value = button.dataset.service;
       updateSummary();
-    });
-  });
-}
-
-function bindServiceButtons() {
-  document.querySelectorAll("[data-service]").forEach((button) => {
-    button.addEventListener("click", () => {
-      if (!els.bookingService) return;
-
-      els.bookingService.value = button.dataset.service;
-      els.bookingTime.value = "";
-      updateSummary();
-      updateSchedulePicker();
     });
   });
 }
@@ -516,15 +509,6 @@ function fillServiceSelect() {
   els.bookingService.innerHTML = services
     .map((service) => `<option value="${service.id}">${service.title} - ${moneyLabel(service)}</option>`)
     .join("");
-}
-
-function preselectServiceFromUrl() {
-  const params = new URLSearchParams(window.location.search);
-  const serviceId = params.get("service");
-
-  if (serviceId && services.some((service) => service.id === serviceId)) {
-    els.bookingService.value = serviceId;
-  }
 }
 
 function renderDatePicker() {
@@ -688,6 +672,25 @@ function submitBooking(event) {
   showToast("WhatsApp abierto. Enviá ahí el comprobante de pago.");
 }
 
+function initAgeGate() {
+  if (new URLSearchParams(window.location.search).has("resetAge")) {
+    localStorage.removeItem(ageKey);
+    sessionStorage.removeItem(ageKey);
+  }
+
+  if (sessionStorage.getItem(ageKey) === "true") {
+    document.body.classList.remove("locked");
+    els.ageGate.classList.remove("visible");
+    return;
+  }
+
+  els.confirmAge.addEventListener("click", () => {
+    sessionStorage.setItem(ageKey, "true");
+    document.body.classList.remove("locked");
+    els.ageGate.classList.remove("visible");
+  });
+}
+
 function initCookieBanner() {
   if (!els.cookieBanner) return;
 
@@ -719,11 +722,10 @@ function init() {
   renderPrices();
   renderGallery();
   fillServiceSelect();
-  preselectServiceFromUrl();
-  bindServiceButtons();
   updatePaymentLink();
   updateSummary();
   updateCalendarLock();
+  initAgeGate();
   initCookieBanner();
 
   els.bookingService.addEventListener("change", () => {
