@@ -181,10 +181,10 @@ textarea {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(255, 250, 248, 0.98) 0%, rgba(255, 250, 248, 0.92) 36%, rgba(255, 250, 248, 0.32) 58%, rgba(255, 250, 248, 0.04) 100%),
+    linear-gradient(90deg, rgba(255, 250, 248, 0.9) 0%, rgba(255, 250, 248, 0.72) 34%, rgba(255, 250, 248, 0.18) 56%, rgba(255, 250, 248, 0) 100%),
     url("assets/optimized/hero-masajista-roja-sin-filtro.jpeg");
   background-size: cover;
-  background-position: 76% center;
+  background-position: 68% center;
 }
 
 .hero::after {
@@ -193,8 +193,8 @@ textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 28%;
-  background: linear-gradient(transparent, rgba(255, 247, 246, 0.96));
+  height: 18%;
+  background: linear-gradient(transparent, rgba(255, 247, 246, 0.7));
 }
 
 .hero-content {
