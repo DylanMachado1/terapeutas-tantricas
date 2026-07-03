@@ -234,6 +234,18 @@ h1 {
   line-height: 0.98;
 }
 
+.hero-title span {
+  display: block;
+}
+
+.hero-title .hero-title-script {
+  margin-bottom: 10px;
+  font-size: clamp(30px, 3.2vw, 48px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.08;
+}
+
 h2 {
   margin-bottom: 18px;
   color: var(--red-deep);
@@ -1652,6 +1664,12 @@ textarea:disabled {
   h1 {
     font-size: 35px;
     line-height: 1.04;
+  }
+
+  .hero-title .hero-title-script {
+    margin-bottom: 7px;
+    font-size: 27px;
+    line-height: 1.05;
   }
 
   h2 {
