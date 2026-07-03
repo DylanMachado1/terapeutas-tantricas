@@ -673,11 +673,6 @@ function submitBooking(event) {
 }
 
 function initAgeGate() {
-  if (!els.ageGate || !els.confirmAge) {
-    document.body.classList.remove("locked");
-    return;
-  }
-
   if (new URLSearchParams(window.location.search).has("resetAge")) {
     localStorage.removeItem(ageKey);
     sessionStorage.removeItem(ageKey);
