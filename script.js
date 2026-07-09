@@ -743,3 +743,17 @@ function init() {
 }
 
 init();
+// Ajuste final del diseño viejo para Club de Señores.
+document.addEventListener("DOMContentLoaded", function () {
+  var hero = document.querySelector(".hero, .hero-section, .hero-area, .hero-banner, main section, section");
+  if (!hero) return;
+  hero.classList.add("club-hero-fixed");
+
+  var eyebrow = hero.querySelector(".eyebrow, .kicker, [class*='eyebrow'], [class*='kicker']");
+  if (eyebrow) eyebrow.textContent = "SENSUALIDAD Y EROTISMO";
+
+  var h1 = hero.querySelector("h1");
+  if (h1 && /Masajes\s+Sensitivos|Club\s+de\s+Señores/i.test(h1.textContent)) {
+    h1.innerHTML = '<span class="hero-title-script">Club de Señores</span><span class="hero-title-main">Masajes Sensitivos</span>';
+  }
+});

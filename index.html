@@ -39,20 +39,200 @@
       }
     </script>
     <link rel="stylesheet" href="styles.css?v=20260626-publicacion1" />
-  </head>
+  <style id="codex-hero-old-fix">
+.hero,
+.hero-section,
+.hero-legacy,
+.hero-wrap,
+.hero-intro,
+.site-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100svh - 96px);
+  background-color: #fff8f8;
+}
+.hero::before,
+.hero-section::before,
+.hero-legacy::before,
+.hero-wrap::before,
+.hero-intro::before,
+.site-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.92) 31%, rgba(255,255,255,.58) 58%, rgba(255,255,255,.14) 100%),
+    linear-gradient(180deg, rgba(255,255,255,.02) 0%, rgba(255,255,255,.18) 56%, rgba(255,255,255,.82) 100%),
+    url("assets/optimized/hero-club-senores-red-dress.jpeg");
+  background-size: cover;
+  background-position: 48% center;
+  background-repeat: no-repeat;
+}
+.hero-bg,
+.hero-media,
+.hero-image,
+.hero-visual {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  background-image:
+    linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.92) 31%, rgba(255,255,255,.58) 58%, rgba(255,255,255,.14) 100%),
+    linear-gradient(180deg, rgba(255,255,255,.02) 0%, rgba(255,255,255,.18) 56%, rgba(255,255,255,.82) 100%),
+    url("assets/optimized/hero-club-senores-red-dress.jpeg") !important;
+  background-size: cover !important;
+  background-position: 48% center !important;
+  background-repeat: no-repeat !important;
+}
+.hero-bg img,
+.hero-media img,
+.hero-image img,
+.hero-visual img { display: none !important; }
+.hero > *:not(.hero-bg):not(.hero-media):not(.hero-image):not(.hero-visual),
+.hero-section > *:not(.hero-bg):not(.hero-media):not(.hero-image):not(.hero-visual),
+.site-hero > *:not(.hero-bg):not(.hero-media):not(.hero-image):not(.hero-visual),
+.hero-content,
+.hero-copy {
+  position: relative;
+  z-index: 2;
+}
+.hero-title {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  max-width: 820px;
+}
+.hero-title-script {
+  display: block;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(2rem, 3vw, 3.35rem);
+  line-height: .98;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #7b1024;
+}
+.hero-title-main {
+  display: block;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(4.1rem, 6.9vw, 7.4rem);
+  line-height: .86;
+  letter-spacing: 0;
+  color: #7b1024;
+}
+@media (max-width: 760px) {
+  .hero,
+  .hero-section,
+  .hero-legacy,
+  .hero-wrap,
+  .hero-intro,
+  .site-hero {
+    min-height: calc(100svh - 116px);
+    padding-top: 30vh;
+    display: flex;
+    align-items: flex-end;
+  }
+  .hero::before,
+  .hero-section::before,
+  .hero-legacy::before,
+  .hero-wrap::before,
+  .hero-intro::before,
+  .site-hero::before,
+  .hero-bg,
+  .hero-media,
+  .hero-image,
+  .hero-visual {
+    background-image:
+      linear-gradient(180deg, rgba(255,255,255,.03) 0%, rgba(255,255,255,.12) 34%, rgba(255,255,255,.88) 67%, #fff 100%),
+      url("assets/optimized/hero-club-senores-red-dress.jpeg") !important;
+    background-size: cover !important;
+    background-position: 46% top !important;
+  }
+  .hero-title-script { font-size: clamp(2.15rem, 9vw, 3.1rem); }
+  .hero-title-main { font-size: clamp(3.65rem, 14vw, 5.45rem); }
+}
+</style>
+<style id="codex-hero-sync-fix">
+:root{--codex-hero-image:url("assets/optimized/hero-club-senores-red-dress.jpeg");}
+.hero,.hero-section,.site-hero,.hero-wrap,.hero-legacy,.home-hero,.hero-banner,.inicio-hero,section:first-of-type{position:relative!important;overflow:hidden!important;isolation:isolate!important;background-image:linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.91) 36%,rgba(255,255,255,.52) 64%,rgba(255,255,255,.12) 100%),var(--codex-hero-image)!important;background-size:cover!important;background-position:center center!important;background-repeat:no-repeat!important;min-height:calc(100vh - 96px)!important;}
+.codex-hero-fixed{background:none!important;}
+.codex-hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:-2;display:block!important;}
+.codex-hero-fixed::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.91) 36%,rgba(255,255,255,.52) 64%,rgba(255,255,255,.12) 100%);pointer-events:none;}
+.hero-eyebrow,.eyebrow,[class*="eyebrow"]{letter-spacing:.22em!important;text-transform:uppercase!important;color:#b01234!important;font-weight:800!important;}
+.hero-title-script,.brand-script,.club-script{display:block!important;font-family:"Cormorant Garamond",Georgia,serif!important;font-style:italic!important;font-weight:500!important;font-size:clamp(2.1rem,4.4vw,4.4rem)!important;line-height:.95!important;color:#7f1230!important;}
+.hero-title-main,.hero-title .main-title,.hero-title strong{display:block!important;font-family:"Cormorant Garamond",Georgia,serif!important;font-weight:700!important;font-size:clamp(4.3rem,7.7vw,8rem)!important;line-height:.84!important;color:#7f1230!important;}
+.hero h1,.hero-section h1,.site-hero h1,.hero-wrap h1,.home-hero h1,section:first-of-type h1{font-family:"Cormorant Garamond",Georgia,serif!important;color:#7f1230!important;line-height:.86!important;}
+@media (max-width:760px){
+  .hero,.hero-section,.site-hero,.hero-wrap,.hero-legacy,.home-hero,.hero-banner,.inicio-hero,section:first-of-type{min-height:calc(100vh - 120px)!important;padding-top:44vh!important;background-image:linear-gradient(180deg,rgba(255,255,255,.08) 0%,rgba(255,255,255,.22) 32%,rgba(255,255,255,.92) 53%,rgba(255,255,255,.99) 100%),var(--codex-hero-image)!important;background-position:center top!important;}
+  .codex-hero-bg-img{object-position:center top;}
+  .codex-hero-fixed::after{background:linear-gradient(180deg,rgba(255,255,255,.08) 0%,rgba(255,255,255,.22) 32%,rgba(255,255,255,.92) 53%,rgba(255,255,255,.99) 100%);}
+  .hero-title-script,.brand-script,.club-script{font-size:clamp(2.35rem,10vw,3.6rem)!important;}
+  .hero-title-main,.hero-title .main-title,.hero-title strong{font-size:clamp(3.75rem,15vw,5.8rem)!important;}
+}
+</style>
+<style id="codex-hero-title-fix">
+:root{--codex-hero-image:url("assets/optimized/hero-club-senores-red-dress.jpeg");}
+.hero,.hero-section,.hero-area,.hero-banner,.hero-wrap,.main-hero,#inicio,header.hero,section:first-of-type{
+  background-image:linear-gradient(90deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.9) 34%,rgba(255,255,255,.44) 62%,rgba(255,255,255,.1) 100%),var(--codex-hero-image)!important;
+  background-size:cover!important;
+  background-position:center right!important;
+  background-repeat:no-repeat!important;
+  min-height:calc(100vh - 96px);
+}
+.hero h1,.hero-title,h1{max-width:760px;}
+.hero-title-script{
+  display:block;
+  font-family:Georgia,serif;
+  font-style:italic;
+  font-weight:400;
+  font-size:clamp(2.1rem,4vw,4rem);
+  line-height:.98;
+  color:#7b1026;
+  margin-bottom:.1em;
+}
+.hero-title-main{
+  display:block;
+  font-family:Georgia,serif;
+  font-weight:700;
+  font-size:clamp(4.4rem,8vw,8.8rem);
+  line-height:.88;
+  letter-spacing:0;
+  color:#7b1026;
+}
+@media (max-width: 768px){
+  .hero,.hero-section,.hero-area,.hero-banner,.hero-wrap,.main-hero,#inicio,header.hero,section:first-of-type{
+    min-height:100vh!important;
+    padding-top:48vh!important;
+    background-image:linear-gradient(180deg,rgba(255,255,255,.05) 0%,rgba(255,255,255,.1) 35%,rgba(255,255,255,.96) 57%,rgba(255,255,255,1) 100%),var(--codex-hero-image)!important;
+    background-position:top center!important;
+  }
+  .hero-title-script{font-size:clamp(2rem,9vw,3rem);}
+  .hero-title-main{font-size:clamp(3.4rem,15vw,5.7rem);}
+}
+</style>
+<script id="codex-hero-title-fix">
+document.addEventListener('DOMContentLoaded',function(){
+  var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+  var n;
+  while(n=walker.nextNode()){
+    n.nodeValue=n.nodeValue
+      .replace(/CITA TÁNTRICA PRIVADA/g,'SENSUALIDAD Y EROTISMO')
+      .replace(/Cita tántrica privada/g,'Sensualidad y erotismo');
+  }
+  var h1=document.querySelector('.hero h1, .hero-title, h1');
+  if(h1){h1.innerHTML='<span class="hero-title-script">Club de Señores</span><span class="hero-title-main">Masajes Sensitivos</span>';}
+  document.querySelectorAll('.brand strong,.logo strong,.brand-title,.site-title').forEach(function(el){
+    el.innerHTML='CLUB DE SEÑORES<br>MASAJES SENSITIVOS';
+  });
+});
+</script>
+</head>
   <body class="locked">
-    <div class="age-gate visible" id="ageGate" aria-modal="true" role="dialog" aria-labelledby="ageTitle">
-      <div class="age-card">
-        <p class="eyebrow">Acceso reservado</p>
-        <h2 id="ageTitle">Contenido para mayores de 21 años</h2>
-        <p>
-          Masajes Sensitivos ofrece experiencias privadas de bienestar,
-          sensorialidad y relax en un marco profesional.
-        </p>
-        <div class="age-actions">
-          <button class="btn primary" id="confirmAge">Soy mayor de 21</button>
-          <a class="btn ghost" href="about:blank">Salir</a>
-        </div>
+    
       </div>
     </div>
 
@@ -84,10 +264,8 @@
         <div class="hero-media" aria-hidden="true"></div>
         <div class="hero-content">
           <p class="eyebrow">Sensualidad y Erotismo</p>
-          <h1 class="hero-title">
-            <span class="hero-title-script">Club de Señores</span>
-            <span>Masajes Sensitivos</span>
-          </h1>
+          <h1 class="hero-title"><span class="hero-title-script">Club de Señores</span><span class="hero-title-main">Masajes</span><span class="hero-title-main">Sensitivos</span></h1>
+<p class="hero-lead">Más que un masaje tántrico: una cita tántrica de disfrute, conexión y relax.<br>Un lugar privado, exclusivo y de alto nivel, con discreción desde el primer mensaje.</p>
           <p class="hero-copy">
             Más que un masaje tántrico: una cita tántrica de disfrute,
             conexión y relax. Un lugar privado, exclusivo y de alto nivel,
@@ -405,5 +583,19 @@
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="script.js?v=20260626-publicacion1" defer></script>
-  </body>
+  <script id="codex-hero-sync-script">
+document.addEventListener("DOMContentLoaded",function(){
+  var hero=document.querySelector(".hero,.hero-section,.site-hero,.hero-wrap,.hero-legacy,.home-hero,.hero-banner,.inicio-hero,section:first-of-type");
+  if(hero&&!hero.querySelector(".codex-hero-bg-img")){
+    var img=document.createElement("img");
+    img.className="codex-hero-bg-img";
+    img.src="assets/optimized/hero-club-senores-red-dress.jpeg";
+    img.alt="";
+    img.setAttribute("aria-hidden","true");
+    hero.classList.add("codex-hero-fixed");
+    hero.insertBefore(img,hero.firstChild);
+  }
+});
+</script>
+</body>
 </html>
