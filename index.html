@@ -15,7 +15,7 @@
     <link rel="preload" as="image" href="assets/optimized/hero-masajista-roja.jpeg" />
     <link rel="icon" type="image/png" sizes="512x512" href="assets/optimized/masajes-sensitivos-icon-512.png" />
     <link rel="apple-touch-icon" href="assets/optimized/masajes-sensitivos-apple-touch.png" />
-    <meta property="og:title" content="Club de Señores Masajes Sensitivos | Tantra & Relax" />
+    <meta property="og:title" content="<span class="club-line">Club de Señores</span>Masajes Sensitivos | Tantra & Relax" />
     <meta
       property="og:description"
       content="Club privado de experiencias tántricas, jacuzzi, camilla, tatami y rituales sensoriales de alto nivel."
@@ -25,14 +25,14 @@
     <meta property="og:locale" content="es_UY" />
     <meta property="og:image" content="https://clubdeseñores.com/assets/optimized/masajes-sensitivos-icon-512.png" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Club de Señores Masajes Sensitivos | Tantra & Relax" />
+    <meta name="twitter:title" content="<span class="club-line">Club de Señores</span>Masajes Sensitivos | Tantra & Relax" />
     <meta name="twitter:description" content="Experiencias privadas de tantra, relax, jacuzzi y bienestar sensorial de alto nivel." />
     <meta name="twitter:image" content="https://clubdeseñores.com/assets/optimized/masajes-sensitivos-icon-512.png" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Club de Señores Masajes Sensitivos",
+        "name": "<span class="club-line">Club de Señores</span>Masajes Sensitivos",
         "image": "https://clubdeseñores.com/assets/optimized/masajes-sensitivos-icon-512.png",
         "logo": "https://clubdeseñores.com/assets/optimized/masajes-sensitivos-icon-512.png",
         "url": "https://clubdeseñores.com/"
@@ -220,8 +220,8 @@ document.addEventListener('DOMContentLoaded',function(){
   var n;
   while(n=walker.nextNode()){
     n.nodeValue=n.nodeValue
-      .replace(/CITA TÁNTRICA PRIVADA/g,'SENSUALIDAD Y EROTISMO')
-      .replace(/Cita tántrica privada/g,'Sensualidad y erotismo');
+      .replace(/SENSUALIDAD Y EROTISMO/g,'SENSUALIDAD Y EROTISMO')
+      .replace(/SENSUALIDAD Y EROTISMO/g,'Sensualidad y erotismo');
   }
   var h1=document.querySelector('.hero h1, .hero-title, h1');
   if(h1){h1.innerHTML='<span class="hero-title-script">Club de Señores</span><span class="hero-title-main">Masajes Sensitivos</span>';}
@@ -230,6 +230,45 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 });
 </script>
+<style id="codex-old-preview-fixes">
+  .hero, .hero-section, .main-hero, .hero-old, .landing-hero, header.hero, section:first-of-type {
+    background-image:
+      linear-gradient(90deg, rgba(255,255,255,.96) 0%, rgba(255,255,255,.86) 32%, rgba(255,255,255,.38) 56%, rgba(255,255,255,.10) 100%),
+      url("assets/optimized/hero-club-senores-red-dress.jpeg") !important;
+    background-size: cover !important;
+    background-position: center right !important;
+    background-repeat: no-repeat !important;
+  }
+  .club-line {
+    display: block;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(2.2rem, 4.8vw, 4.8rem);
+    line-height: .95;
+    letter-spacing: 0;
+    margin-bottom: .12em;
+    color: #7f1028;
+  }
+  .hero h1, .hero-section h1, .main-hero h1, .landing-hero h1, section:first-of-type h1 {
+    max-width: 780px;
+    color: #7f1028;
+  }
+  @media (max-width: 760px) {
+    .hero, .hero-section, .main-hero, .hero-old, .landing-hero, header.hero, section:first-of-type {
+      min-height: calc(100vh - 120px) !important;
+      padding-top: clamp(320px, 46vh, 440px) !important;
+      background-image:
+        linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,.92) 48%, rgba(255,255,255,.98) 100%),
+        url("assets/optimized/hero-club-senores-red-dress.jpeg") !important;
+      background-position: center top !important;
+      background-size: cover !important;
+    }
+    .club-line {
+      font-size: clamp(2.4rem, 11vw, 4.2rem);
+    }
+  }
+</style>
 </head>
   <body class="locked">
     
@@ -237,7 +276,7 @@ document.addEventListener('DOMContentLoaded',function(){
     </div>
 
     <header class="site-header">
-      <a class="brand" href="#inicio" aria-label="Club de Señores Masajes Sensitivos">
+      <a class="brand" href="#inicio" aria-label="<span class="club-line">Club de Señores</span>Masajes Sensitivos">
         <span class="brand-mark">
           <img src="assets/optimized/masajes-sensitivos-logo.jpeg" alt="" decoding="async" />
         </span>
@@ -547,7 +586,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <div>
         <strong>Club de Señores<br />Masajes Sensitivos</strong>
         <p>Tantra, relax, jacuzzi y bienestar sensorial en un entorno privado.</p>
-        <small>&copy; 2026 Club de Señores Masajes Sensitivos. Todos los derechos reservados.</small>
+        <small>&copy; 2026 <span class="club-line">Club de Señores</span>Masajes Sensitivos. Todos los derechos reservados.</small>
       </div>
       <div class="footer-actions">
         <a href="#reserva">Reservar</a>
