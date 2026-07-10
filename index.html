@@ -269,6 +269,73 @@ document.addEventListener('DOMContentLoaded',function(){
     }
   }
 </style>
+<style id="codex-final-old-preview-fixes">
+  .hero,
+  .hero-section,
+  #inicio {
+    position: relative !important;
+  }
+
+  .hero {
+    min-height: calc(100vh - 88px) !important;
+    display: flex !important;
+    align-items: center !important;
+    background-image:
+      linear-gradient(90deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.83) 35%, rgba(255,255,255,.22) 63%, rgba(255,255,255,.06) 100%),
+      url("assets/optimized/hero-club-senores-red-dress.jpeg") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .hero h1 {
+    max-width: 760px !important;
+    line-height: .9 !important;
+  }
+
+  .hero-kicker {
+    display: block !important;
+    margin-bottom: .15rem !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-style: italic !important;
+    font-size: clamp(2.2rem, 4vw, 4.4rem) !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    color: #83142b !important;
+  }
+
+  .hero-main-title {
+    display: block !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: clamp(4.2rem, 8vw, 8.8rem) !important;
+    line-height: .88 !important;
+    color: #83142b !important;
+  }
+
+  @media (max-width: 760px) {
+    .hero {
+      min-height: calc(100vh - 132px) !important;
+      align-items: flex-end !important;
+      padding: clamp(4rem, 9vh, 6rem) 1.35rem 2.5rem !important;
+      background-image:
+        linear-gradient(180deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,.22) 30%, rgba(255,255,255,.86) 62%, rgba(255,255,255,.98) 100%),
+        url("assets/optimized/hero-club-senores-red-dress.jpeg") !important;
+      background-position: center top !important;
+    }
+
+    .hero h1 {
+      max-width: 100% !important;
+    }
+
+    .hero-kicker {
+      font-size: clamp(2.1rem, 9vw, 3.2rem) !important;
+    }
+
+    .hero-main-title {
+      font-size: clamp(3.8rem, 15vw, 5.4rem) !important;
+    }
+  }
+</style>
 </head>
   <body class="locked">
     
@@ -303,7 +370,7 @@ document.addEventListener('DOMContentLoaded',function(){
         <div class="hero-media" aria-hidden="true"></div>
         <div class="hero-content">
           <p class="eyebrow">Sensualidad y Erotismo</p>
-          <h1 class="hero-title"><span class="hero-title-script">Club de Señores</span><span class="hero-title-main">Masajes</span><span class="hero-title-main">Sensitivos</span></h1>
+          <h1><span class="hero-kicker">Club de Señores</span><span class="hero-main-title">Masajes Sensitivos</span></h1>
 <p class="hero-lead">Más que un masaje tántrico: una cita tántrica de disfrute, conexión y relax.<br>Un lugar privado, exclusivo y de alto nivel, con discreción desde el primer mensaje.</p>
           <p class="hero-copy">
             Más que un masaje tántrico: una cita tántrica de disfrute,
