@@ -1,0 +1,4 @@
+const cards=document.querySelectorAll('[data-service-card]');
+cards.forEach(card=>{const cover=card.querySelector('.modality-cover'),close=card.querySelector('.close-card');cover.addEventListener('click',()=>{cards.forEach(other=>{if(other!==card){other.classList.remove('open');other.querySelector('.modality-cover').setAttribute('aria-expanded','false')}});card.classList.add('open');cover.setAttribute('aria-expanded','true')});close.addEventListener('click',()=>{card.classList.remove('open');cover.setAttribute('aria-expanded','false');cover.focus()})});
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));

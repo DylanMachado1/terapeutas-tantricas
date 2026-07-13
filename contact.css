@@ -1,0 +1,67 @@
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 0 0 1px #6c151d33;
+}
+
+.contact > div {
+  max-width: 800px;
+}
+
+.contact-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.contact-options article {
+  padding: 26px;
+  border: 1px solid #ffffff22;
+  background: #ffffff05;
+}
+
+.contact-options h3 {
+  margin: 0;
+  color: #ecdcb8;
+  font: 600 25px/1.05 var(--serif);
+}
+
+.contact-options p {
+  min-height: 42px;
+  color: #aaa99f;
+  font-size: 12px;
+}
+
+.contact-options .button {
+  margin-top: 8px;
+}
+
+@media (max-width: 720px) {
+  .brand-logo {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+  }
+
+  .contact-options {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-options article {
+    text-align: center;
+  }
+
+  .contact-options p {
+    min-height: 0;
+  }
+
+  .contact-options .button {
+    width: 100%;
+  }
+}
