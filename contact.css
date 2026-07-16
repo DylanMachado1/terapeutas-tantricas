@@ -68,10 +68,16 @@
 }
 
 .contact-options .upcoming {
-  cursor: default;
   color: #d4c8ae;
   border-color: #d9c9a866;
   background: #ffffff05;
+}
+
+.contact-options .upcoming:hover,
+.contact-options .upcoming:focus-visible {
+  color: #fff;
+  border-color: #d9c9a8;
+  background: #ffffff0d;
 }
 
 .site-footer {
