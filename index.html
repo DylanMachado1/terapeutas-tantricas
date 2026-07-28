@@ -113,6 +113,30 @@
       <small>© 2026 Club de Señores. Todos los derechos reservados.</small>
     </div>
   </footer>
+  <script>
+    (()=>{
+      const serviceImages=[
+        ['assets/images/servicio-camilla-nuevo.jpeg','Masaje tÃ¡ntrico en camilla'],
+        ['assets/images/servicio-camilla-interactivo-nuevo.jpeg','Masaje tÃ¡ntrico interactivo en camilla'],
+        ['assets/images/servicio-tatami-nuevo.jpeg','Masaje tÃ¡ntrico en tatami'],
+        ['assets/images/servicio-tatami-interactivo-nuevo.jpeg','Masaje tÃ¡ntrico interactivo en tatami']
+      ];
+      document.querySelectorAll('[data-service-card] .modality-cover img').forEach((img,i)=>{if(serviceImages[i]){img.src=serviceImages[i][0];img.alt=serviceImages[i][1]}});
+      const gallery=document.querySelector('.gallery-grid');
+      if(gallery){
+        gallery.innerHTML=[
+          ['img','assets/images/galeria-bata-nueva.jpeg','Bata preparada para la ducha'],
+          ['img','assets/images/galeria-cafe-nuevo.jpeg','CafÃ© de cortesÃ­a'],
+          ['img','assets/images/galeria-incienso-nuevo.jpeg','Ambiente de calma e incienso'],
+          ['img','assets/images/galeria-entrada-nueva.jpeg','Entrada privada'],
+          ['img','assets/images/galeria-ducha-nueva.jpeg','Ducha de despedida'],
+          ['img','assets/images/galeria-ambiente-nuevo.jpeg','Ambiente Ã­ntimo'],
+          ['video','assets/videos/galeria-nuevo-01.mp4','Experiencia en video'],
+          ['video','assets/videos/galeria-nuevo-02.mp4','Masaje en video']
+        ].map(([type,src,label])=>type==='img'?`<figure><img src="${src}" alt="${label}" width="640" height="640" loading="lazy" decoding="async"></figure>`:`<figure class="gallery-video"><video controls muted loop playsinline preload="none" aria-label="${label}"><source src="${src}" type="video/mp4"></video></figure>`).join('');
+      }
+    })();
+  </script>
   <script src="simple.js" defer></script>
 </body>
 </html>
