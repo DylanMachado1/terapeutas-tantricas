@@ -115,6 +115,12 @@
   </footer>
   <script>
     (()=>{
+      const oldOnlyFans=document.querySelector('a[href*="onlyfans.com"]');
+      if(oldOnlyFans){
+        const oldCard=oldOnlyFans.closest('article');
+        oldCard?.remove();
+        document.querySelector('.contact-options')?.insertAdjacentHTML('beforeend','<article><h3>Seguinos en Instagram</h3><p>Conocé el espacio, las novedades y el universo de Conexión y Relax.</p><a class="button outline" href="https://www.instagram.com/conexionyrelax/" target="_blank" rel="noopener">Instagram · @conexionyrelax</a></article>');
+      }
       const serviceImages=[
         ['assets/images/servicio-camilla-nuevo.jpeg','Masaje tÃ¡ntrico en camilla'],
         ['assets/images/servicio-camilla-interactivo-nuevo.jpeg','Masaje tÃ¡ntrico interactivo en camilla'],
