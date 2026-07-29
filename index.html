@@ -24,6 +24,8 @@
   <style>@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500 600;font-display:optional;src:url("assets/fonts/cormorant-garamond-normal.woff2") format("woff2")}@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:600;font-display:optional;src:url("assets/fonts/cormorant-garamond-italic.woff2") format("woff2")}@font-face{font-family:"Manrope";font-style:normal;font-weight:300 600;font-display:optional;src:url("assets/fonts/manrope.woff2") format("woff2")}</style>
   <link rel="stylesheet" href="simple.css">
   <style>.gallery-grid .gallery-video{order:5;background:#0b0d0a;position:relative}.gallery-grid .gallery-video video{display:block;width:100%;height:100%;aspect-ratio:1;object-fit:cover;background:#0b0d0a}.gallery-grid .gallery-video video:focus{outline:2px solid #c79c54;outline-offset:-2px}.gallery{content-visibility:auto;contain-intrinsic-size:760px}</style>
+  <style>.entry-video{padding:clamp(1rem,3vw,2.5rem) clamp(1rem,5vw,4rem) 0;background:#f4efe5}.entry-video-inner{max-width:760px;margin:0 auto}.entry-video video{display:block;width:100%;max-height:430px;object-fit:cover;border-radius:4px;background:#0b0d0a}.entry-video figcaption{margin:.7rem 0 0;color:#6f664f;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;text-align:center}</style>
+  <style>.modalities{position:relative}.modality-grid{display:flex;gap:15px;max-width:1400px;overflow-x:auto;padding:0 42px 12px;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}.modality-grid::-webkit-scrollbar{display:none}.modality-card{flex:0 0 clamp(235px,18vw,285px);scroll-snap-align:start}.modality-nav{display:flex;justify-content:flex-end;gap:8px;max-width:1400px;margin:-25px auto 16px;padding:0 42px;position:relative;z-index:4}.modality-nav button{width:40px;height:40px;border:1px solid #b9a984;border-radius:50%;background:var(--paper);color:var(--forest);font-size:23px;line-height:1;cursor:pointer;transition:background .2s,color .2s}.modality-nav button:hover{background:var(--forest);color:#fff}@media(max-width:720px){.modality-grid{padding-left:18px;padding-right:18px}.modality-card{flex-basis:84vw}.modality-nav{padding:0 18px;margin-top:-10px}}</style>
   <link rel="stylesheet" href="contact.css?v=20260716-2">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Club de Señores","url":"https://xn--clubdeseores-hhb.com/","logo":"https://xn--clubdeseores-hhb.com/assets/images/logo-club-de-senores-verde.jpeg","description":"Terapia tántrica privada, consciente y exclusiva en Uruguay para mayores de 21 años.","contactPoint":{"@type":"ContactPoint","telephone":"+59891905997","contactType":"reservations","areaServed":"UY","availableLanguage":"es"}}</script>
 </head>
@@ -43,6 +45,15 @@
         <p>Ducha de bienvenida, café de cortesía y un masaje tántrico full desnudez erótico con terapeuta de primer nivel.</p>
         <div class="hero-actions"><a class="button gold" href="https://wa.me/59891905997?text=Hola%2C%20quisiera%20consultar%20por%20una%20experiencia%20en%20Club%20de%20Se%C3%B1ores." target="_blank" rel="noopener">Contactar por WhatsApp</a><a class="text-link" href="#modalidades">Ver modalidades ↓</a></div>
       </div>
+    </section>
+
+    <section class="entry-video" aria-label="Bienvenida en video">
+      <figure class="entry-video-inner">
+        <video controls muted playsinline preload="metadata" poster="assets/optimized/hero.webp" aria-label="Video de bienvenida al espacio">
+          <source src="assets/videos/video-bienvenida-2026-07-29.mp4" type="video/mp4">
+        </video>
+        <figcaption>Una mirada consciente antes de tu experiencia</figcaption>
+      </figure>
     </section>
 
     <section class="modalities section" id="modalidades">
@@ -115,6 +126,24 @@
   </footer>
   <script>
     (()=>{
+      const modalities=document.querySelector('.modality-grid');
+      const cardData=[
+        {cover:'Masaje en Camilla<br>Relajante sensitivo',sub:'Camilla \u00b7 Relajante sensitivo',tag:'Relajante y sensitivo',body:['Una sesi\u00f3n dividida en cuatro disfrutables etapas: conexi\u00f3n sensorial con la masajista.','Masajes suaves con tules.','Masaje relajante con aceites calientes.','Terminaci\u00f3n sensitiva.'],included:'Incluye bebida refrescante.'},
+        {cover:'Masaje en Camilla<br>Relajante sensitivo',sub:'Camilla \u00b7 Interactivo',tag:'Relajante sensitivo \u00b7 Interactivo',body:['Un masaje que te permite, adem\u00e1s de recibir, interactuar armoniosamente con la terapeuta en las cuatro etapas del masaje.','Creando una experiencia m\u00e1s profunda y sentida.'],included:'Bebida refrescante de cortes\u00eda.'},
+        {cover:'Masaje en Tatami<br>T\u00e1ntrico',sub:'Tatami \u00b7 T\u00e1ntrico',tag:'Relajante y sensitivo',body:['Una verdadera experiencia de conexi\u00f3n y relax para los aficionados del verdadero sentir.','Enfatizando el conocimiento ancestral mediante masajes sensoriales, relajantes y fervientes sensitivos.','Llevando al paciente a un nivel de estimulaci\u00f3n y elevaci\u00f3n continua.','Una terapia que combina los cinco sentidos.','\u00bfTe anim\u00e1s a experimentarla?'],included:'Caf\u00e9 de cortes\u00eda y duchas.'},
+        {cover:'Masaje T\u00e1ntrico en<br>Tatami',sub:'Tatami \u00b7 Interactivo',tag:'Relajante sensitivo \u00b7 Interactivo',body:['Aqu\u00ed la experiencia es la anteriormente mencionada en Tatami t\u00e1ntrico.','La diferencia es que se incrementa la interacci\u00f3n del paciente hacia la masajista en las diferentes etapas t\u00e1ntricas mediante la caricia consciente.','Logrando una experiencia m\u00e1s virtuosa y pr\u00f3xima con la terapeuta.'],included:'Caf\u00e9 y duchas de cortes\u00eda.'},
+        {cover:'Masaje en Tatami<br>T\u00e1ntrico guiado',sub:'Tatami \u00b7 Guiado',tag:'Conexi\u00f3n consciente',body:['Aqu\u00ed vivir\u00e1s la experiencia de aprender a hacer Tantra con la masajista, mediante la gu\u00eda armoniosa de la terapeuta en cada etapa del masaje.','Tanto la conexi\u00f3n como los masajes relajantes sensitivos llevan el ritual de experimentar con la pr\u00e1ctica del sentir mediante la caricia consciente.','Es una sesi\u00f3n sublime para quienes quieren disfrutar de Dar Tantra y aprender conocimientos milenarios.','\u00bfTe anim\u00e1s a vivir el verdadero Tantra?','Esta terapia es para pausar, sentir, disfrutar y dejarse llevar. Ven\u00ed con tiempo.'],included:'Caf\u00e9 de cortes\u00eda y duchas.'}
+      ];
+      if(modalities){
+        if(!document.querySelector('.modality-nav')) modalities.insertAdjacentHTML('beforebegin','<div class="modality-nav" aria-label="Navegar experiencias"><button type="button" class="modality-prev" aria-label="Experiencia anterior">&#8592;</button><button type="button" class="modality-next" aria-label="Siguiente experiencia">&#8594;</button></div>');
+        if(!modalities.querySelectorAll('[data-service-card]')[4]) modalities.insertAdjacentHTML('beforeend',`<article class="modality-card reveal" data-service-card><button class="modality-cover" type="button" aria-expanded="false"><img src="assets/images/manos-sobre-seda.jpeg" alt="Experiencia t\u00e1ntrica guiada sobre seda" width="720" height="1020" loading="lazy" decoding="async"><span class="cover-shade"></span><span class="cover-copy"><span class="cover-title"><strong>Masaje en Tatami<br>T\u00e1ntrico guiado</strong></span><em>Conexi\u00f3n consciente</em><i>Ver experiencia</i></span></button><div class="modality-info"><button class="close-card" type="button" aria-label="Cerrar informaci\u00f3n">\u00d7</button><h3>Tatami \u00b7 Guiado</h3></div></article>`);
+        const cards=modalities.querySelectorAll('[data-service-card]');
+        cards.forEach((card,i)=>{const d=cardData[i];if(!d)return;const title=card.querySelector('.cover-title strong');const tag=card.querySelector('.cover-copy em');const info=card.querySelector('.modality-info');if(title)title.innerHTML=d.cover;if(tag)tag.textContent=d.tag;if(info){info.innerHTML='<button class="close-card" type="button" aria-label="Cerrar informaci\u00f3n">\u00d7</button><h3>'+d.sub+'</h3>'+d.body.map(p=>'<p>'+p+'</p>').join('')+'<p class="included">'+d.included+'</p>';}});
+        const heading=document.querySelector('#modalidades h2');if(heading)heading.textContent='Cinco formas de conectar y sentir. Viv\u00ed tu experiencia';
+        const prev=document.querySelector('.modality-prev'),next=document.querySelector('.modality-next');
+        const move=dir=>modalities.scrollBy({left:dir*modalities.clientWidth*.82,behavior:'smooth'});
+        prev?.addEventListener('click',()=>move(-1));next?.addEventListener('click',()=>move(1));
+      }
       const oldOnlyFans=document.querySelector('a[href*="onlyfans.com"]');
       if(oldOnlyFans){
         const oldCard=oldOnlyFans.closest('article');
